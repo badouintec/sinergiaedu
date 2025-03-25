@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Universidades - Sinergia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <a class="logo" href="index.html">Sinergia</a>
+            <div class="user-area">
+                <div class="notifications">
+                    <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/pic04.jpg" alt="Usuario">
+                    <span>Marcela García</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="demo.html"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li><a href="evaluaciones.html"><i class="fas fa-chart-pie"></i> <span>Evaluaciones</span></a></li>
+                    <li><a href="mercado-laboral.html"><i class="fas fa-briefcase"></i> <span>Mercado Laboral</span></a></li>
+                    <li><a href="mentoria.html"><i class="fas fa-users"></i> <span>Mentoría</span></a></li>
+                    <li class="active"><a href="universidades.html"><i class="fas fa-university"></i> <span>Universidades</span></a></li>
+                    <li><a href="historias.html"><i class="fas fa-book-open"></i> <span>Historias</span></a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> <span>Eventos</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#configuracion"><i class="fas fa-cog"></i> <span>Configuración</span></a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Salir</span></a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <div class="section-header">
+                <h2>Programas Universitarios Recomendados</h2>
+                <p>Descubre carreras y oportunidades educativas que coinciden con tu perfil</p>
+            </div>
+            
+            <!-- University Search & Filter -->
+            <div class="uni-search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar universidad o programa...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active">Todos</button>
+                    <button class="filter-tab">Ingeniería</button>
+                    <button class="filter-tab">Tecnología</button>
+                    <button class="filter-tab">Diseño</button>
+                    <button class="filter-tab">Ciencias</button>
+                    <button class="filter-tab">Online</button>
+                </div>
+            </div>
+            
+            <!-- University Recommendations -->
+            <div class="university-recommendations">
+                <h3>Programas recomendados según tus evaluaciones</h3>
+                <div class="university-cards">
+                    <div class="university-card featured">
+                        <div class="uni-badge"><i class="fas fa-star"></i> 95% Match</div>
+                        <div class="uni-logo">
+                            <img src="images/uni1.jpg" alt="Universidad Tecnológica">
+                        </div>
+                        <div class="uni-info">
+                            <h4>Ingeniería en Ciencia de Datos</h4>
+                            <h5>Universidad Tecnológica de Innovación</h5>
+                            <div class="uni-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Ciudad de México</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 años</span>
+                                <span><i class="fas fa-dollar-sign"></i> $$$</span>
+                            </div>
+                            <p>Este programa te prepara para extraer conocimientos valiosos de grandes volúmenes de datos utilizando algoritmos avanzados de inteligencia artificial y estadística.</p>
+                            <div class="key-subjects">
+                                <span>Machine Learning</span>
+                                <span>Estadística</span>
+                                <span>Big Data</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="uni-actions">
+                            <a href="#" class="button special small">Ver Detalles</a>
+                            <a href="#" class="button small">Guardar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="university-card">
+                        <div class="uni-badge"><i class="fas fa-star"></i> 88% Match</div>
+                        <div class="uni-logo">
+                            <img src="images/uni2.jpg" alt="Universidad Digital">
+                        </div>
+                        <div class="uni-info">
+                            <h4>Ingeniería en Desarrollo de Software</h4>
+                            <h5>Universidad Digital Global</h5>
+                            <div class="uni-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 100% Online</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3.5 años</span>
+                                <span><i class="fas fa-dollar-sign"></i> $$</span>
+                            </div>
+                            <p>Programa flexible enfocado en desarrollo de aplicaciones web y móviles con énfasis en metodologías ágiles y buenas prácticas de programación.</p>
+                            <div class="key-subjects">
+                                <span>Full Stack</span>
+                                <span>Mobile Dev</span>
+                                <span>Metodologías Ágiles</span>
+                                <span>DevOps</span>
+                            </div>
+                        </div>
+                        <div class="uni-actions">
+                            <a href="#" class="button special small">Ver Detalles</a>
+                            <a href="#" class="button small">Guardar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="university-card">
+                        <div class="uni-badge"><i class="fas fa-star"></i> 82% Match</div>
+                        <div class="uni-logo">
+                            <img src="images/uni3.jpg" alt="Instituto Diseño">
+                        </div>
+                        <div class="uni-info">
+                            <h4>Licenciatura en Diseño de Experiencia Digital</h4>
+                            <h5>Instituto Internacional de Diseño</h5>
+                            <div class="uni-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Barcelona, España</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 años</span>
+                                <span><i class="fas fa-dollar-sign"></i> $$$</span>
+                            </div>
+                            <p>Programa que integra diseño visual, investigación de usuarios y estrategia digital para crear experiencias digitales centradas en el usuario.</p>
+                            <div class="key-subjects">
+                                <span>UX Research</span>
+                                <span>UI Design</span>
+                                <span>Psicología</span>
+                                <span>Prototyping</span>
+                            </div>
+                        </div>
+                        <div class="uni-actions">
+                            <a href="#" class="button special small">Ver Detalles</a>
+                            <a href="#" class="button small">Guardar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scholarship Opportunities -->
+            <div class="scholarship-opportunities">
+                <h3>Becas y Ayudas Financieras</h3>
+                <div class="scholarship-cards">
+                    <div class="scholarship-card">
+                        <div class="scholarship-header">
+                            <h4>Beca Talento Digital</h4>
+                            <span class="scholarship-amount">Hasta 70%</span>
+                        </div>
+                        <div class="scholarship-body">
+                            <p>Para estudiantes con alto potencial en áreas tecnológicas. Incluye mentoría personalizada y prácticas en empresas líderes.</p>
+                            <ul class="requirements">
+                                <li>Promedio mínimo 8.5</li>
+                                <li>Carta de motivación</li>
+                                <li>Portfolio de proyectos</li>
+                            </ul>
+                        </div>
+                        <div class="scholarship-footer">
+                            <span class="deadline"><i class="fas fa-clock"></i> Cierre: 15 diciembre</span>
+                            <a href="#" class="button small special">Aplicar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="scholarship-card">
+                        <div class="scholarship-header">
+                            <h4>Programa Mujeres en Tech</h4>
+                            <span class="scholarship-amount">50% + Estipendio</span>
+                        </div>
+                        <div class="scholarship-body">
+                            <p>Iniciativa para promover la participación femenina en carreras STEM, con programa de mentorías y networking exclusivo.</p>
+                            <ul class="requirements">
+                                <li>Identificarse como mujer</li>
+                                <li>Ensayo de aplicación</li>
+                                <li>Entrevista personal</li>
+                            </ul>
+                        </div>
+                        <div class="scholarship-footer">
+                            <span class="deadline"><i class="fas fa-clock"></i> Cierre: 30 noviembre</span>
+                            <a href="#" class="button small special">Aplicar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="scholarship-card">
+                        <div class="scholarship-header">
+                            <h4>Beca Internacional Sinergia</h4>
+                            <span class="scholarship-amount">100% + Gastos</span>
+                        </div>
+                        <div class="scholarship-body">
+                            <p>Programa completo para estudiar en universidades internacionales de prestigio, con cobertura total de matrícula y gastos de manutención.</p>
+                            <ul class="requirements">
+                                <li>Promedio superior 9.0</li>
+                                <li>Prueba de inglés certificada</li>
+                                <li>Proyecto de investigación</li>
+                            </ul>
+                        </div>
+                        <div class="scholarship-footer">
+                            <span class="deadline"><i class="fas fa-clock"></i> Cierre: 10 enero</span>
+                            <a href="#" class="button small special">Aplicar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

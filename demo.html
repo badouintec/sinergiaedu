@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Dashboard - Sinergia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <a class="logo" href="index.html">Sinergia</a>
+            <div class="user-area">
+                <div class="notifications">
+                    <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/pic04.jpg" alt="Usuario">
+                    <span>Marcela García</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="demo.html"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li><a href="evaluaciones.html"><i class="fas fa-chart-pie"></i> <span>Evaluaciones</span></a></li>
+                    <li><a href="mercado-laboral.html"><i class="fas fa-briefcase"></i> <span>Mercado Laboral</span></a></li>
+                    <li><a href="mentoria.html"><i class="fas fa-users"></i> <span>Mentoría</span></a></li>
+                    <li><a href="universidades.html"><i class="fas fa-university"></i> <span>Universidades</span></a></li>
+                    <li><a href="historias.html"><i class="fas fa-book-open"></i> <span>Historias</span></a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> <span>Eventos</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#configuracion" class="config-link"><i class="fas fa-cog"></i> <span>Configuración</span></a>
+                <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> <span>Salir</span></a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Welcome Header -->
+            <div class="welcome-header">
+                <h1>¡Bienvenida, Marcela!</h1>
+                <p>Esta es tu plataforma de orientación vocacional personalizada</p>
+            </div>
+            
+            <!-- Progress Summary -->
+            <div class="dashboard-widgets">
+                <div class="widget">
+                    <h3>Tu progreso</h3>
+                    <div class="progress-stats">
+                        <div class="progress-item">
+                            <span class="label">Perfil completado</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;">85%</div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <span class="label">Evaluaciones realizadas</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%;">60%</div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <span class="label">Mentorías agendadas</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;">40%</div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <span class="label">Exploración de carreras</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-footer">
+                        <a href="#" class="view-all">Ver plan completo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <h3>Recomendaciones para ti</h3>
+                    <div class="recommendation-cards">
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4>Test de personalidad</h4>
+                            <p>Completa esta evaluación para obtener recomendaciones más precisas.</p>
+                            <a href="evaluaciones.html" class="button small special">Comenzar</a>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h4>Explorar universidades</h4>
+                            <p>3 nuevos programas coinciden con tu perfil.</p>
+                            <a href="universidades.html" class="button small">Ver ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Career Insights -->
+            <div class="widget career-insights">
+                <h3>Perspectivas profesionales</h3>
+                <div class="insights-content">
+                    <div class="insight-visual">
+                        <div class="career-match">
+                            <h4>Carreras con mayor afinidad</h4>
+                            <div class="match-item">
+                                <span class="match-label">Ingeniería en Ciencia de Datos</span>
+                                <div class="match-bar">
+                                    <div class="match-value" style="width: 92%;">92%</div>
+                                </div>
+                            </div>
+                            <div class="match-item">
+                                <span class="match-label">Desarrollo de Software</span>
+                                <div class="match-bar">
+                                    <div class="match-value" style="width: 85%;">85%</div>
+                                </div>
+                            </div>
+                            <div class="match-item">
+                                <span class="match-label">Analista de Sistemas</span>
+                                <div class="match-bar">
+                                    <div class="match-value" style="width: 78%;">78%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-details">
+                        <h4>Análisis de tus intereses</h4>
+                        <p>Basado en tus evaluaciones, muestras una fuerte afinidad por:</p>
+                        <ul class="interest-list">
+                            <li><i class="fas fa-check"></i> Resolución analítica de problemas</li>
+                            <li><i class="fas fa-check"></i> Trabajo con tecnologías emergentes</li>
+                            <li><i class="fas fa-check"></i> Desarrollo de soluciones creativas</li>
+                            <li><i class="fas fa-check"></i> Análisis de datos e información</li>
+                        </ul>
+                        <a href="mercado-laboral.html" class="button special">Explorar mercado laboral</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Events -->
+            <div class="upcoming-events">
+                <h3>Próximos eventos y sesiones</h3>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Sesión inicial con Carlos Mendoza</h4>
+                            <p>Primera reunión para conocer objetivos y establecer plan de mentorías.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 15:00 - 16:00</span>
+                                <span><i class="fas fa-video"></i> Videoconferencia</span>
+                            </div>
+                        </div>
+                        <div class="event-action">
+                            <a href="mentoria.html" class="button small">Ver detalles</a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">19</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Taller: Creando un Portfolio de UX Design Efectivo</h4>
+                            <p>Aprende a estructurar y destacar tus proyectos de UX para conseguir entrevistas de trabajo.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 16:00 - 18:00</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Online (Zoom)</span>
+                            </div>
+                        </div>
+                        <div class="event-action">
+                            <a href="eventos.html" class="button small">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-footer">
+                    <a href="eventos.html" class="view-all">Ver todos los eventos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Access -->
+            <div class="quick-access">
+                <h3>Accesos rápidos</h3>
+                <div class="quick-links">
+                    <a href="evaluaciones.html" class="quick-link">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Evaluaciones</span>
+                    </a>
+                    <a href="mercado-laboral.html" class="quick-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Mercado Laboral</span>
+                    </a>
+                    <a href="mentoria.html" class="quick-link">
+                        <i class="fas fa-users"></i>
+                        <span>Mentoría</span>
+                    </a>
+                    <a href="universidades.html" class="quick-link">
+                        <i class="fas fa-university"></i>
+                        <span>Universidades</span>
+                    </a>
+                    <a href="historias.html" class="quick-link">
+                        <i class="fas fa-book-open"></i>
+                        <span>Historias</span>
+                    </a>
+                    <a href="eventos.html" class="quick-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Eventos</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script>
+        // Eliminar cualquier handler existente en los enlaces del sidebar
+        $(document).ready(function() {
+            // Limpiar cualquier evento previo que pudiera interferir
+            $('.sidebar-nav a').off();
+            
+            // Restaurar comportamiento de navegación por defecto
+            // No agregar eventos que puedan interferir con la navegación normal
+        });
+    </script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

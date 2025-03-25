@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Evaluaciones - Sinergia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS principal y dashboard -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- jQuery primero -->
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <a class="logo" href="index.html">Sinergia</a>
+            <div class="user-area">
+                <div class="notifications">
+                    <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/pic04.jpg" alt="Usuario">
+                    <span>Marcela García</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="demo.html"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li class="active"><a href="evaluaciones.html"><i class="fas fa-chart-pie"></i> <span>Evaluaciones</span></a></li>
+                    <li><a href="mercado-laboral.html"><i class="fas fa-briefcase"></i> <span>Mercado Laboral</span></a></li>
+                    <li><a href="mentoria.html"><i class="fas fa-users"></i> <span>Mentoría</span></a></li>
+                    <li><a href="universidades.html"><i class="fas fa-university"></i> <span>Universidades</span></a></li>
+                    <li><a href="historias.html"><i class="fas fa-book-open"></i> <span>Historias</span></a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> <span>Eventos</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#configuracion"><i class="fas fa-cog"></i> <span>Configuración</span></a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Salir</span></a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <div class="section-header">
+                <h2>Evaluaciones Vocacionales</h2>
+                <p>Descubre tus habilidades, intereses y aptitudes</p>
+            </div>
+            
+            <div class="evaluaciones-resumen">
+                <div class="chart-container">
+                    <div class="chart-wrapper">
+                        <h3>Tus áreas de interés</h3>
+                        <div class="chart-placeholder" id="interest-chart">
+                            <div class="chart-visualization">
+                                <div class="chart-bar" style="height: 85%;">
+                                    <span class="chart-label">Tecnología</span>
+                                </div>
+                                <div class="chart-bar" style="height: 65%;">
+                                    <span class="chart-label">Ciencias</span>
+                                </div>
+                                <div class="chart-bar" style="height: 45%;">
+                                    <span class="chart-label">Diseño</span>
+                                </div>
+                                <div class="chart-bar" style="height: 75%;">
+                                    <span class="chart-label">Análisis</span>
+                                </div>
+                                <div class="chart-bar" style="height: 35%;">
+                                    <span class="chart-label">Gestión</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Tus habilidades destacadas</h3>
+                        <div class="chart-placeholder" id="skills-chart">
+                            <div class="skills-radar">
+                                <div class="skill-point" style="top: 30%; left: 70%;">Resolución de problemas</div>
+                                <div class="skill-point" style="top: 45%; left: 85%;">Pensamiento lógico</div>
+                                <div class="skill-point" style="top: 60%; left: 75%;">Creatividad técnica</div>
+                                <div class="skill-point" style="top: 70%; left: 50%;">Comunicación clara</div>
+                                <div class="skill-point" style="top: 45%; left: 20%;">Trabajo en equipo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="evaluaciones-cards">
+                    <div class="eval-card completed">
+                        <div class="eval-icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Test de Aptitudes</h4>
+                        <p>Completado el 5 de septiembre</p>
+                        <a href="#" class="button small">Ver resultados</a>
+                    </div>
+                    <div class="eval-card completed">
+                        <div class="eval-icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Test de Intereses</h4>
+                        <p>Completado el 12 de septiembre</p>
+                        <a href="#" class="button small">Ver resultados</a>
+                    </div>
+                    <div class="eval-card">
+                        <div class="eval-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <h4>Test de Personalidad</h4>
+                        <p>Pendiente</p>
+                        <a href="#" class="button special small">Comenzar</a>
+                    </div>
+                    <div class="eval-card">
+                        <div class="eval-icon"><i class="fas fa-lock"></i></div>
+                        <h4>Análisis de Valores</h4>
+                        <p>Disponible después del test de personalidad</p>
+                        <a href="#" class="button alt small disabled">Bloqueado</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="career-recommendations">
+                <h3>Carreras recomendadas según tus resultados</h3>
+                <div class="career-matches">
+                    <div class="career-match">
+                        <div class="match-percentage">92%</div>
+                        <div class="career-details">
+                            <h4>Ingeniería en Ciencia de Datos</h4>
+                            <p>Esta carrera combina tus habilidades analíticas con tu interés por la tecnología.</p>
+                            <div class="career-stats">
+                                <span><i class="fas fa-chart-line"></i> Demanda creciente</span>
+                                <span><i class="fas fa-dollar-sign"></i> Salario promedio alto</span>
+                            </div>
+                        </div>
+                        <div class="career-action">
+                            <a href="#" class="button special small">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="career-match">
+                        <div class="match-percentage">85%</div>
+                        <div class="career-details">
+                            <h4>Desarrollo de Software</h4>
+                            <p>Aprovecha tu pensamiento lógico y habilidades de resolución de problemas.</p>
+                            <div class="career-stats">
+                                <span><i class="fas fa-chart-line"></i> Alta demanda</span>
+                                <span><i class="fas fa-dollar-sign"></i> Salario competitivo</span>
+                            </div>
+                        </div>
+                        <div class="career-action">
+                            <a href="#" class="button special small">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="career-match">
+                        <div class="match-percentage">78%</div>
+                        <div class="career-details">
+                            <h4>Analista de Sistemas</h4>
+                            <p>Combina aspectos técnicos con habilidades de comunicación y gestión.</p>
+                            <div class="career-stats">
+                                <span><i class="fas fa-chart-line"></i> Demanda estable</span>
+                                <span><i class="fas fa-dollar-sign"></i> Buen salario</span>
+                            </div>
+                        </div>
+                        <div class="career-action">
+                            <a href="#" class="button special small">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

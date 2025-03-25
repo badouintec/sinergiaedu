@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Mercado Laboral - Sinergia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <a class="logo" href="index.html">Sinergia</a>
+            <div class="user-area">
+                <div class="notifications">
+                    <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/pic04.jpg" alt="Usuario">
+                    <span>Marcela García</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="demo.html"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li><a href="evaluaciones.html"><i class="fas fa-chart-pie"></i> <span>Evaluaciones</span></a></li>
+                    <li class="active"><a href="mercado-laboral.html"><i class="fas fa-briefcase"></i> <span>Mercado Laboral</span></a></li>
+                    <li><a href="mentoria.html"><i class="fas fa-users"></i> <span>Mentoría</span></a></li>
+                    <li><a href="universidades.html"><i class="fas fa-university"></i> <span>Universidades</span></a></li>
+                    <li><a href="historias.html"><i class="fas fa-book-open"></i> <span>Historias</span></a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> <span>Eventos</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#configuracion"><i class="fas fa-cog"></i> Configuración</a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Salir</a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <div class="section-header">
+                <h2>Análisis del Mercado Laboral</h2>
+                <p>Explora tendencias y oportunidades profesionales actuales</p>
+            </div>
+            
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="sector">Sector</label>
+                    <select id="sector">
+                        <option value="all">Todos los sectores</option>
+                        <option value="tech" selected>Tecnología</option>
+                        <option value="health">Salud</option>
+                        <option value="education">Educación</option>
+                        <option value="finance">Finanzas</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="region">Región</label>
+                    <select id="region">
+                        <option value="all">Global</option>
+                        <option value="latam" selected>Latinoamérica</option>
+                        <option value="europe">Europa</option>
+                        <option value="northamerica">Norteamérica</option>
+                        <option value="asia">Asia</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="timeframe">Período</label>
+                    <select id="timeframe">
+                        <option value="current">Actual</option>
+                        <option value="1year" selected>Próximo año</option>
+                        <option value="5year">Próximos 5 años</option>
+                        <option value="10year">Próximos 10 años</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="skill">Habilidad Principal</label>
+                    <select id="skill">
+                        <option value="all">Todas</option>
+                        <option value="programming" selected>Programación</option>
+                        <option value="datascience">Ciencia de Datos</option>
+                        <option value="design">Diseño</option>
+                        <option value="management">Gestión</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Trends Visualization -->
+            <div class="trends-visualization">
+                <div class="trend-chart">
+                    <h3>Crecimiento por Área Profesional</h3>
+                    <div class="chart-area">
+                        <div class="line-chart-placeholder">
+                            <div class="chart-line" style="--start: 20%; --end: 80%;"><span class="line-label">Desarrollo Software</span></div>
+                            <div class="chart-line" style="--start: 10%; --end: 95%;"><span class="line-label">IA / Machine Learning</span></div>
+                            <div class="chart-line" style="--start: 30%; --end: 75%;"><span class="line-label">Ciberseguridad</span></div>
+                            <div class="chart-line" style="--start: 25%; --end: 60%;"><span class="line-label">UX/UI Design</span></div>
+                            <div class="chart-line" style="--start: 15%; --end: 65%;"><span class="line-label">DevOps</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trend-map">
+                    <h3>Demanda Geográfica</h3>
+                    <div class="map-area">
+                        <div class="map-placeholder">
+                            <div class="map-hotspot large" style="top: 35%; left: 25%;" title="México: Alta demanda en tecnologías cloud"></div>
+                            <div class="map-hotspot" style="top: 45%; left: 35%;" title="Colombia: Crecimiento en desarrollo web"></div>
+                            <div class="map-hotspot large" style="top: 60%; left: 40%;" title="Brasil: Hub de innovación tecnológica"></div>
+                            <div class="map-hotspot" style="top: 65%; left: 30%;" title="Chile: Fuerte en fintech y minería de datos"></div>
+                            <div class="map-hotspot" style="top: 55%; left: 28%;" title="Perú: Emergente en desarrollo móvil"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hot Skills -->
+            <div class="hot-skills">
+                <h3>Habilidades más demandadas (Sector Tecnología)</h3>
+                <div class="skills-list">
+                    <span class="skill-tag high-demand">Python</span>
+                    <span class="skill-tag high-demand">Machine Learning</span>
+                    <span class="skill-tag high-demand">AWS</span>
+                    <span class="skill-tag high-demand">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag high-demand">Kubernetes</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag high-demand">Ciencia de Datos</span>
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag high-demand">DevOps</span>
+                    <span class="skill-tag">Blockchain</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag high-demand">Ciberseguridad</span>
+                    <span class="skill-tag">Flutter</span>
+                </div>
+            </div>
+            
+            <!-- Salary Range -->
+            <div class="salary-ranges" style="margin-top: 30px;">
+                <h3>Rangos Salariales por Rol</h3>
+                <div class="salary-chart">
+                    <div class="salary-bar">
+                        <div class="role">Desarrollador Frontend</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 65%;">$35k - $60k</div>
+                        </div>
+                    </div>
+                    <div class="salary-bar">
+                        <div class="role">Desarrollador Backend</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 70%;">$40k - $70k</div>
+                        </div>
+                    </div>
+                    <div class="salary-bar">
+                        <div class="role">Científico de Datos</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 85%;">$55k - $95k</div>
+                        </div>
+                    </div>
+                    <div class="salary-bar">
+                        <div class="role">Ingeniero DevOps</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 80%;">$50k - $85k</div>
+                        </div>
+                    </div>
+                    <div class="salary-bar">
+                        <div class="role">Diseñador UX/UI</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 60%;">$30k - $65k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

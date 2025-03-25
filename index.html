@@ -1,157 +1,397 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Sinergia by Sinergia
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sinergia - Landing</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://via.placeholder.com/50"/>
-  <!-- Fuente Google: Poppins -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet"/>
-  <!-- Hoja de estilos principal -->
-  <link rel="stylesheet" href="styles.css"/>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<title>Sinergia - Integración Tecnológica</title>
+	<meta charset="UTF-8">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
-<body class="no-sidebar">
-  <!-- TOPBAR -->
-  <header class="topbar fade-in" id="topbarSection">
-    <div class="logo-container">
-      <img src="imagenes/sinergia_logo.png" alt="Sinergia" class="logo"/>
-      <h1>Sinergia</h1>
-    </div>
-    <nav class="menu">
-      <ul>
-        <li><a href="#inicio" class="scroll-link">Inicio</a></li>
-        <li><a href="#plataforma" class="scroll-link">Plataforma</a></li>
-        <li><a href="#blog" class="scroll-link">Blog</a></li>
-        <li><a href="#contacto" class="scroll-link">Contacto</a></li>
-        <li><a href="#equipo" class="scroll-link">Equipo</a></li>
-      </ul>
-    </nav>
-    <div class="topbar-actions">
-      <button onclick="redirectToHome()">
-        <i class="fas fa-user"></i> Demo Login
-      </button>
-    </div>
-  </header>
+<body>
 
-  <!-- SECCIÓN 1: INICIO (Parallax Hero) -->
-  <section id="inicio" class="parallax-section inicio fade-in" style="background: url('https://tec.mx/sites/default/files/repositorio/leon/prepatec-multicultural.jpg') center/cover no-repeat;">
-    <div class="parallax-content shadow-box">
-      <h2>Sinergia</h2>
-      <p>
-        ¡Hola, Innovadores! Presentamos Sinergia, una plataforma transformadora que empodera a estudiantes de secundaria (16-18 años) para planificar su futuro profesional.
-      </p>
-      <p>
-        Con inteligencia artificial avanzada, análisis de datos en tiempo real y una red de mentoría robusta, ofrecemos orientación vocacional 100% personalizada.
-      </p>
-    </div>
-  </section>
+		<!-- Header -->
+		<header class="modern-header">
+			<div class="container">
+				<a class="logo" href="index.html">Sinergia</a>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="#inicio" class="active">Inicio</a></li>
+						<li><a href="#about">Sobre Nosotros</a></li>
+						<li><a href="#contact">Contacto</a></li>
+						<li><a href="demo.html">Demo</a></li>
+					</ul>
+				</nav>
+				<!-- Hamburger menu button for mobile -->
+				<button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+					<span class="sr-only">Menú</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+		</header>
 
-  <!-- SECCIÓN 2: PLATAFORMA (Parallax) -->
-  <section id="plataforma" class="parallax-section plataforma fade-in" style="background: url('https://conecta.tec.mx/sites/default/files/styles/header_full/public/2023-04/prepatec-crea-maraton-de-estudios-para-reforzar-habitos-de-estudio.jpg.webp?itok=wKWIHoz_') center/cover no-repeat;">
-    <div class="parallax-content shadow-box">
-      <h2>Plataforma Sinergia</h2>
-      <p>
-        Sinergia integra evaluaciones impulsadas por IA, análisis predictivo del mercado laboral y mentoría personalizada para guiar a los estudiantes en su elección de carrera de forma dinámica y en tiempo real.
-      </p>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 3: BLOG -->
-  <section id="blog" class="section-content fade-in">
-    <h2 class="section-title">Blog: Noticias y Artículos</h2>
-    <div class="blog-container">
-      <!-- Entrada de Blog 1 -->
-      <article class="blog-card">
-        <img src="https://conecta.tec.mx/sites/default/files/inline-images/profesores-prepatec.jpg" alt="Innovando en la orientación vocacional"/>
-        <div class="blog-content">
-          <h3>Innovando en la orientación vocacional</h3>
-          <p>
-            Descubre cómo Sinergia utiliza algoritmos avanzados para ofrecer evaluaciones y recomendaciones personalizadas que transforman la elección de carrera.
-          </p>
-          <a href="blog1.html">Leer más</a>
+		<!-- Nav (menu móvil) -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menú</h2>
+				<ul class="links">
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#about">Sobre Nosotros</a></li>
+					<li><a href="#contact">Contacto</a></li>
+					<li><a href="demo.html">Demo</a></li>
+				</ul>
+				<a href="#" class="close">Cerrar</a>
+			</div>
+		</nav>
+                
+        <!-- Inicio Section -->
+        <div id="inicio">
+            <!-- Banner -->
+            <section id="banner" style="background-image: url('images/banner.jpg');">
+                <div class="inner">
+                    <h1>Bienvenido a Sinergia</h1>
+                    <p>Ecosistema de orientación vocacional impulsado por IA, diseñado para guiar a estudiantes hacia su futuro profesional a través de análisis predictivo y mentoría personalizada.</p>
+                    <a href="#about" class="button special scrolly">Descubrir más</a>
+                </div>
+            </section>
+            
+            <!-- One -->
+            <article id="one" class="post style1">
+                <div class="image">
+                    <img src="https://tec.mx/sites/default/files/repositorio/leon/prepatec-multicultural.jpg" alt="Prepatec Multicultural" data-position="75% center" width="1400" height="788">
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header>
+                            <h2>¿Qué es Sinergia?</h2>
+                            <p class="info">Actualizado recientemente por el equipo de Sinergia</p>
+                        </header>
+                        <p>Sinergia es un ecosistema integral de orientación vocacional que integra evaluaciones impulsadas por IA, análisis predictivo del mercado laboral y mentoría personalizada. Nuestra plataforma capacita a estudiantes de bachillerato (16-18 años) para tomar decisiones informadas sobre su futuro académico y profesional en un entorno laboral rápidamente cambiante, ofreciendo recomendaciones que evolucionan en tiempo real según sus habilidades, intereses y tendencias emergentes del mercado.</p>
+                        <ul class="actions">
+                            <li><a href="#two" class="button alt scrolly">Leer Más</a></li>
+                        </ul>
+                    </div>
+                    <div class="postnav">
+                        <a href="#" class="prev disabled"><span class="icon fa-chevron-up"></span></a>
+                        <a href="#two" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Two -->
+            <article id="two" class="post invert style1 alt">
+                <div class="image">
+                    <img src="https://tec.mx/sites/default/files/repositorio/leon/admisiones-prepa-tec.jpg" alt="Admisiones Prepa Tec" data-position="10% center" width="1400" height="788">
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header>
+                            <h2>Evaluaciones y Análisis Predictivo</h2>
+                            <p class="info">Impulsado por inteligencia artificial avanzada</p>
+                        </header>
+                        <div class="section-content">
+                            <p>Nuestros algoritmos de IA realizan un análisis exhaustivo del rendimiento académico, actividades extracurriculares, rasgos de personalidad y patrones de interacción digital de cada estudiante. Esta evaluación multidimensional genera recomendaciones profesionales personalizadas que se refinan continuamente a medida que el estudiante evoluciona.</p>
+                            <p>Complementamos este análisis con insights predictivos del mercado laboral a nivel local, nacional y global, visualizando tendencias clave como la creciente demanda en energías renovables o la expansión de empleos remotos en tecnología.</p>
+                        </div>
+                        <ul class="actions">
+                            <li><a href="#three" class="button alt scrolly">Leer Más</a></li>
+                        </ul>
+                    </div>
+                    <div class="postnav">
+                        <a href="#one" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+                        <a href="#three" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Three -->
+            <article id="three" class="post style2">
+                <div class="image">
+                    <img src="https://conecta.tec.mx/sites/default/files/inline-images/prepatec-alumnos-closeup-talleres.jpg" alt="Prepatec Alumnos Talleres" data-position="80% center" width="1400" height="788">
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header>
+                            <h2>Chatbot y Mentoría Personalizada</h2>
+                            <p class="info">Asesoría inteligente y conexiones significativas</p>
+                        </header>
+                        <p>Nuestro asistente conversacional inteligente, inspirado en soluciones avanzadas como IBM Watson, mantiene diálogos naturales e intuitivos con los estudiantes, respondiendo consultas sobre trayectorias educativas y programando sesiones de asesoramiento personalizado. El sistema aprende continuamente de cada interacción para ofrecer consejos cada vez más precisos y contextualizados. Complementamos esta inteligencia artificial con una extensa red de mentores —desde universitarios hasta profesionales experimentados— que ofrecen perspectivas del mundo real, oportunidades de seguimiento laboral y facilitación de prácticas profesionales, cerrando efectivamente la brecha entre el aprendizaje académico y el éxito profesional.</p>
+                        <ul class="actions">
+                            <li><a href="#four" class="button alt scrolly">Leer Más</a></li>
+                        </ul>
+                    </div>
+                    <div class="postnav">
+                        <a href="#two" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+                        <a href="#four" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Four -->
+            <article id="four" class="post invert style2 alt">
+                <div class="image">
+                    <img src="https://conecta.tec.mx/sites/default/files/styles/header_full/public/2023-05/graduación-prepatec-laguna-2023.jpg.webp?itok=CINEsXHw" alt="Graduación Prepatec Laguna 2023" data-position="60% center" width="1400" height="788">
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header>
+                            <h2>Perspectivas Laborales en Sinergia</h2>
+                            <p class="info">Análisis inteligente del mercado profesional</p>
+                        </header>
+                        <p>Nuestro sistema de análisis de mercado laboral, basado en tecnología de big data e inteligencia artificial, procesa millones de datos en tiempo real para identificar tendencias emergentes, sectores en crecimiento y habilidades de alta demanda en el mercado profesional. Los estudiantes pueden visualizar geográficamente las oportunidades laborales, comparar diferentes trayectorias profesionales y recibir recomendaciones personalizadas basadas en su perfil único. Esta tecnología no solo muestra el panorama actual sino que predice cómo evolucionarán diferentes industrias en los próximos años, permitiendo a los estudiantes tomar decisiones estratégicas sobre su formación y especialización que maximicen sus oportunidades futuras.</p>
+                        <ul class="actions">
+                            <li><a href="#five" class="button alt scrolly">Leer Más</a></li>
+                        </ul>
+                    </div>
+                    <div class="postnav">
+                        <a href="#three" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+                        <a href="#five" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Five -->
+            <article id="five" class="post style3">
+                <div class="image">
+                    <img src="images/pic13.jpg" alt="" data-position="5% center" width="1400" height="788">
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header>
+                            <h2>Estrategia y Alianzas</h2>
+                            <p class="info">Colaboraciones estratégicas para maximizar impacto</p>
+                        </header>
+                        <p>Nuestro ecosistema se fortalece mediante asociaciones estratégicas con instituciones educativas, empresas tecnológicas y organismos gubernamentales. Colaboramos con líderes en IA e innovadores en ciberseguridad para mantener nuestra plataforma a la vanguardia, integrando tecnologías como Google Vertex AI para refinar continuamente nuestros modelos de aprendizaje automático. Trabajamos con universidades prestigiosas y proveedores de educación online para crear trayectorias educativas fluidas, y nos asociamos con agencias gubernamentales y ONG para asegurar recursos, ampliar nuestro alcance a regiones desatendidas y garantizar la sostenibilidad a largo plazo.</p>
+                        <ul class="actions">
+                            <li><a href="#six" class="button alt scrolly">Leer Más</a></li>
+                        </ul>
+                    </div>
+                    <div class="postnav">
+                        <a href="#four" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+                        <a href="#six" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Six -->
+            <article id="six" class="post invert style3 alt">
+                <div class="image">
+                    <img src="images/pic12.jpg" alt="" data-position="80% center" width="1400" height="788">
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header>
+                            <h2>Arquitectura y Seguridad</h2>
+                            <p class="info">Infraestructura robusta y protección de datos</p>
+                        </header>
+                        <p>Sinergia está construida sobre una base técnica de vanguardia diseñada para ofrecer rendimiento, confiabilidad y crecimiento futuro. Nuestra infraestructura basada en la nube está diseñada para soportar grandes volúmenes de usuarios simultáneos, garantizando tiempos de respuesta rápidos y servicio ininterrumpido. La plataforma está completamente optimizada para dispositivos móviles con una experiencia intuitiva y accesible desde cualquier lugar. La protección de datos es primordial: empleamos protocolos avanzados de encriptación y cumplimos estrictamente con estándares internacionales como COPPA, GDPR y regulaciones locales, con un equipo dedicado de ciberseguridad que monitorea y actualiza continuamente nuestros protocolos.</p>
+                        <ul class="actions">
+                            <li><a href="#about" class="button alt scrolly">Conoce al Equipo</a></li>
+                        </ul>
+                    </div>
+                    <div class="postnav">
+                        <a href="#five" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+                        <a href="#about" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+                    </div>
+                </div>
+            </article>
         </div>
-      </article>
-      <!-- Entrada de Blog 2 -->
-      <article class="blog-card">
-        <img src="https://conecta.tec.mx/sites/default/files/inline-images/profesora-prepatec.jpg" alt="El futuro de la educación con IA"/>
-        <div class="blog-content">
-          <h3>El futuro de la educación con IA</h3>
-          <p>
-            Conoce las tendencias y tecnologías que están revolucionando el ámbito educativo y cómo la IA está transformando la orientación vocacional.
-          </p>
-          <a href="blog2.html">Leer más</a>
-        </div>
-      </article>
-    </div>
-  </section>
+        
+        <!-- About Section -->
+        <section id="about" class="wrapper style1">
+            <div class="inner">
+                <header class="section-header">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Conoce al equipo que hace posible Sinergia</p>
+                </header>
+                
+                <div class="team-container">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="images/team1.jpg" alt="Team Member">
+                        </div>
+                        <h3>Ana Rodríguez</h3>
+                        <p class="member-role">Directora de Innovación</p>
+                        <p>Especialista en inteligencia artificial y análisis predictivo con más de 10 años de experiencia en el sector tecnológico.</p>
+                        <ul class="member-social">
+                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="images/team2.jpg" alt="Team Member">
+                        </div>
+                        <h3>Carlos Méndez</h3>
+                        <p class="member-role">Director de Tecnología</p>
+                        <p>Ingeniero de software con experiencia en desarrollo de plataformas educativas y sistemas de recomendación basados en ML.</p>
+                        <ul class="member-social">
+                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="images/team3.jpg" alt="Team Member">
+                        </div>
+                        <h3>Laura Jiménez</h3>
+                        <p class="member-role">Directora de Experiencia</p>
+                        <p>Psicóloga educativa especializada en desarrollo profesional y orientación vocacional para jóvenes universitarios.</p>
+                        <ul class="member-social">
+                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cta-box">
+                    <h3>¿Quieres formar parte de nuestro equipo?</h3>
+                    <p>Estamos en constante búsqueda de talento. Envíanos tu CV y cuéntanos cómo puedes contribuir a Sinergia.</p>
+                    <a href="#contact" class="button special scrolly">Contáctanos</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="wrapper style2">
+            <div class="inner">
+                <header class="section-header">
+                    <h2>Contacto</h2>
+                    <p>Ponte en contacto con nosotros y descubre cómo podemos ayudarte</p>
+                </header>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <ul class="contact-details">
+                            <li>
+                                <span class="icon fa-map-marker"></span>
+                                <div>
+                                    <h4>Ubicación</h4>
+                                    <p>Av. Tecnológica 2345, Ciudad Innovación</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon fa-phone"></span>
+                                <div>
+                                    <h4>Teléfono</h4>
+                                    <p>+34 912 345 678</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon fa-envelope"></span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@sinergia-tech.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form method="post" action="#" class="contact-form">
+                            <div class="field half first">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Tu email" required>
+                            </div>
+                            <div class="field">
+                                <label for="subject">Asunto</label>
+                                <input type="text" name="subject" id="subject" placeholder="Asunto del mensaje">
+                            </div>
+                            <div class="field">
+                                <label for="message">Mensaje</label>
+                                <textarea name="message" id="message" rows="6" placeholder="Tu mensaje" required></textarea>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Enviar Mensaje" class="special"></li>
+                                <li><input type="reset" value="Limpiar"></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- SECCIÓN 4: CONTACTO -->
-  <section id="contacto" class="section-content contacto fade-in">
-    <h2 class="section-title">Contacto</h2>
-    <p>
-      ¿Listo para transformar tu futuro? Contáctanos y descubre cómo Sinergia puede guiarte hacia la carrera profesional que siempre has soñado.
-    </p>
-  </section>
+		<!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+            <div class="copyright">
+                &copy; 2023 Sinergia. Todos los derechos reservados.
+            </div>
+        </footer>
 
-  <!-- SECCIÓN 5: EQUIPO -->
-  <section id="equipo" class="section-content equipo fade-in">
-    <h2 class="section-title">Nuestro Equipo</h2>
-    <p class="section-subtitle">Conoce a los estudiantes Tec que hicieron esto posible.</p>
-    <div class="equipo-container">
-      <!-- Michelle -->
-      <div class="acreditacion-card">
-        <a href="https://www.linkedin.com/in/michelle-sof%C3%ADa-valenzuela-romo-050218337/" target="_blank">
-          <img src="https://media.licdn.com/dms/image/v2/D4E03AQHjobsO6m-_1A/profile-displayphoto-shrink_400_400/B4EZWMDk1QGgAg-/0/1741811502781?e=1747267200&v=beta&t=x1LZA2m4mUOLpgHptKufeQJuIZAYgg8duv7JYLovah8" alt="Michelle Sofía Valenzuela Romo"/>
-        </a>
-        <div class="acreditacion-info">
-          <h3>
-            <a href="https://www.linkedin.com/in/michelle-sof%C3%ADa-valenzuela-romo-050218337/" target="_blank">
-              Michelle Sofía Valenzuela Romo
-            </a>
-          </h3>
-          <p>Estudiante Tec</p>
-        </div>
-      </div>
-      <!-- Brenda -->
-      <div class="acreditacion-card">
-        <a href="https://www.linkedin.com/in/brenda-camila-dom%C3%ADnguez-l%C3%B3pez-379b81355/" target="_blank">
-          <img src="https://media.licdn.com/dms/image/v2/D4E03AQF492kJiMpUyg/profile-displayphoto-shrink_400_400/B4EZWMDzyTGwAo-/0/1741811564009?e=1747267200&v=beta&t=7Tm3Bf2v7UKZUXTUj7TTPn893FFv2wwQFfpJHNmkWSs" alt="Brenda Camila Domínguez López"/>
-        </a>
-        <div class="acreditacion-info">
-          <h3>
-            <a href="https://www.linkedin.com/in/brenda-camila-dom%C3%ADnguez-l%C3%B3pez-379b81355/" target="_blank">
-              Brenda Camila Domínguez López
-            </a>
-          </h3>
-          <p>Estudiante Tec</p>
-        </div>
-      </div>
-      <!-- Luis Angel -->
-      <div class="acreditacion-card">
-        <a href="https://www.linkedin.com/in/luis-angel-elias-b29651308/" target="_blank">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQFsSnyPOKmH0g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730147860549?e=1747267200&v=beta&t=K1OKSaAFzJSRbelexWTXNyCkIV68WHTZ1RcnXqtaI8o" alt="Luis Angel Elias"/>
-        </a>
-        <div class="acreditacion-info">
-          <h3>
-            <a href="https://www.linkedin.com/in/luis-angel-elias-b29651308/" target="_blank">
-              Luis Angel Elias
-            </a>
-          </h3>
-          <p>Estudiante Tec</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Sinergia. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Carga de scripts externos -->
-  <script src="scripts.js"></script>
-</body>
+		<!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Toggle menu visibility when clicking hamburger button
+                $('.mobile-nav-toggle').on('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('body').toggleClass('is-menu-visible');
+                });
+                
+                // Handle links in mobile menu
+                $('#menu .links a').on('click', function(e) {
+                    e.preventDefault();
+                    var target = $(this).attr('href');
+                    
+                    // Close menu first
+                    $('body').removeClass('is-menu-visible');
+                    
+                    // Wait for transition to complete then navigate
+                    setTimeout(function() {
+                        // If it's an anchor link on the same page
+                        if (target.charAt(0) === '#') {
+                            $('html, body').animate({
+                                scrollTop: $(target).offset().top
+                            }, 500);
+                        } 
+                        // If it's a different page
+                        else {
+                            window.location.href = target;
+                        }
+                    }, 300);
+                });
+                
+                // Close menu when clicking the close button
+                $('#menu .close').on('click', function(e) {
+                    e.preventDefault();
+                    $('body').removeClass('is-menu-visible');
+                });
+                
+                // Close menu when clicking outside
+                $(document).on('click', function(e) {
+                    if ($('body').hasClass('is-menu-visible') && 
+                        !$(e.target).closest('#menu').length && 
+                        !$(e.target).closest('.mobile-nav-toggle').length) {
+                        e.preventDefault();
+                        $('body').removeClass('is-menu-visible');
+                    }
+                });
+            });
+        </script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>

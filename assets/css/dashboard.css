@@ -1,0 +1,1331 @@
+/* Variables y colores del sistema */
+:root {
+    --azul-principal: #1E5F9A;
+    --azul-claro: #4A90E2;
+    --azul-oscuro: #0D2C54;
+    --naranja-principal: #F47B20;
+    --naranja-claro: #FF9D5C;
+    --naranja-oscuro: #C25608;
+    --sidebar-width: 250px;
+    --header-height: 60px;
+    --primary-color: var(--azul-principal);
+    --primary-light: var(--azul-claro);
+    --primary-dark: var(--azul-oscuro);
+    --accent-color: var(--naranja-principal);
+    --accent-light: var(--naranja-claro);
+    --accent-dark: var(--naranja-oscuro);
+    --text-color: #333333;
+    --text-light: #777777;
+    --background-light: #f8f9fa;
+    --border-color: #e0e0e0;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --white: #ffffff;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos base del dashboard */
+body.dashboard-body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+.dashboard-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--azul-principal);
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: white;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 900;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.content-area {
+    flex: 1;
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* Estilos para los gráficos y visualizaciones */
+.evaluaciones-resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-wrapper {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.chart-placeholder {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.chart-visualization {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.chart-bar {
+    width: 18%;
+    background-color: var(--azul-principal);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    min-height: 30px;
+}
+
+.chart-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+.skills-radar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(74,144,226,0.1) 70%);
+    border-radius: 50%;
+}
+
+.skill-point {
+    position: absolute;
+    background-color: var(--azul-principal);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
+/* Tarjetas de evaluación */
+.evaluaciones-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.eval-card {
+    flex: 1;
+    min-width: 220px;
+    max-width: calc(25% - 15px);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.eval-card:hover {
+    transform: translateY(-5px);
+}
+
+.eval-icon {
+    font-size: 2em;
+    color: var(--azul-principal);
+    margin-bottom: 15px;
+}
+
+.eval-card.completed .eval-icon {
+    color: var(--naranja-principal);
+}
+
+/* Recomendaciones */
+.career-recommendations {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+}
+
+.career-matches {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.career-match {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(74, 144, 226, 0.05);
+    border-left: 4px solid var(--azul-principal);
+}
+
+.match-percentage {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--azul-principal);
+    padding: 0 20px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.career-details {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.career-details h4 {
+    margin: 0 0 5px 0;
+    color: var(--azul-oscuro);
+}
+
+.career-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.career-action {
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Estilos del sidebar y navegación */
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-nav li.active {
+    background-color: rgba(74, 144, 226, 0.1);
+    border-left: 4px solid var(--azul-principal);
+}
+
+.sidebar-nav li.active a {
+    color: var(--azul-principal);
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidebar-footer a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Header con usuario */
+.dashboard-header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.dashboard-header .logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notifications .icon {
+    color: white;
+    font-size: 1.2em;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    background-color: var(--naranja-principal);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+    
+    .sidebar-nav li a span,
+    .sidebar-footer a span {
+        display: none;
+    }
+    
+    .content-area {
+        margin-left: 60px;
+    }
+    
+    .chart-wrapper,
+    .eval-card {
+        min-width: 100%;
+    }
+    
+    .eval-card {
+        max-width: 100%;
+    }
+    
+    .career-match {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .match-percentage {
+        margin-bottom: 10px;
+    }
+    
+    .career-stats {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .career-action {
+        margin-top: 15px;
+    }
+}
+
+/* Basic Layout */
+body.dashboard-body {
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--background-light);
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
+    position: relative;
+}
+
+/* Header Styles */
+.dashboard-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    color: var(--white);
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+.dashboard-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.dashboard-header .logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notifications .icon {
+    font-size: 1.2em;
+    color: var(--white);
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--white);
+    height: calc(100vh - var(--header-height));
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-nav {
+    padding: 20px 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar-nav a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-nav li.active a {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-left: 4px solid var(--primary-dark);
+}
+
+.sidebar-nav a:hover:not(.active) {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar-footer a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 30px;
+}
+
+/* Dashboard Section Styles */
+.dashboard-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.dashboard-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.section-header p {
+    color: var(--text-light);
+    margin: 5px 0 0 0;
+}
+
+.section-header .view-all {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Welcome Dashboard */
+.welcome-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-header p {
+    color: var(--text-light);
+    font-size: 1.2em;
+}
+
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.widget {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+}
+
+.widget h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* Progress Widget */
+.progress-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progress-item {
+    margin-bottom: 10px;
+}
+
+.progress-item .label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    height: 12px;
+    background-color: var(--background-light);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    text-align: right;
+    color: white;
+    font-size: 10px;
+    line-height: 12px;
+    padding-right: 5px;
+}
+
+/* Recommendations Widget */
+.recommendation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+/* Upcoming Events */
+.upcoming-events {
+    margin-top: 40px;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.event-item {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    min-width: 80px;
+}
+
+.event-date .day {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.event-date .month {
+    font-size: 0.9em;
+}
+
+.event-details {
+    flex: 1;
+    padding: 15px;
+}
+
+.event-details h4 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+}
+
+.event-details p {
+    margin: 0 0 10px 0;
+    color: var(--text-light);
+}
+
+.event-meta {
+    display: flex;
+    gap: 15px;
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.event-meta i {
+    margin-right: 5px;
+}
+
+.event-action {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Evaluaciones Section */
+.evaluaciones-resumen {
+    margin-bottom: 40px;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.chart-wrapper {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+
+.chart-wrapper h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-placeholder {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Chart Visualizations */
+.chart-visualization {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.chart-bar {
+    width: 50px;
+    background-color: var(--primary-color);
+    margin: 0 10px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.chart-label {
+    position: absolute;
+    bottom: -25px;
+    transform: rotate(-45deg);
+    transform-origin: left top;
+    font-size: 12px;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.skills-radar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(248,249,250,1) 100%);
+    border-radius: 50%;
+}
+
+.skill-point {
+    position: absolute;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+/* Evaluaciones Cards */
+.evaluaciones-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.eval-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.eval-card:hover {
+    transform: translateY(-5px);
+}
+
+.eval-card.completed {
+    border-left: 4px solid var(--success-color);
+}
+
+.eval-icon {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.eval-card.completed .eval-icon {
+    color: var(--success-color);
+}
+
+.eval-card:not(.completed) .eval-icon {
+    color: var(--warning-color);
+}
+
+.eval-card h4 {
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.eval-card p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* Career Recommendations */
+.career-recommendations {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+}
+
+.career-recommendations h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.career-matches {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.career-match {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--background-light);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.career-match:hover {
+    transform: translateX(5px);
+}
+
+.match-percentage {
+    background-color: var(--accent-color);
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+.career-details {
+    flex: 1;
+}
+
+.career-details h4 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+}
+
+.career-details p {
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.career-stats {
+    display: flex;
+    gap: 15px;
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+.career-stats span {
+    display: flex;
+    align-items: center;
+}
+
+.career-stats i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.career-action {
+    margin-left: 15px;
+}
+
+/* Market Trends Section */
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.trends-visualization {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.trend-chart, .trend-map {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+
+.trend-chart h3, .trend-map h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-area, .map-area {
+    height: 300px;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Line Chart Placeholder */
+.line-chart-placeholder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chart-line {
+    height: 2px;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        var(--primary-color) var(--start), 
+        var(--accent-color) var(--end), 
+        transparent 100%);
+    position: relative;
+    margin: 30px 0;
+}
+
+.chart-line:before, .chart-line:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: -3px;
+}
+
+.chart-line:before {
+    left: var(--start);
+    background-color: var(--primary-color);
+}
+
+.chart-line:after {
+    left: var(--end);
+    background-color: var(--accent-color);
+}
+
+.line-label {
+    position: absolute;
+    left: 10px;
+    top: -25px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    background: #f0f0f0 !important; /* Quitar referencia a la imagen temporalmente */
+    position: relative;
+}
+
+.map-placeholder:after {
+    content: "Mapa de Latinoamérica";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+    font-style: italic;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    background: url('../../images/latinamerica-map.png') no-repeat center center;
+    background-size: contain;
+    position: relative;
+}
+
+.map-hotspot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(244, 123, 32, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.map-hotspot.large {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(244, 123, 32, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(244, 123, 32, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(244, 123, 32, 0);
+    }
+}
+
+/* Hot Skills */
+.hot-skills {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+}
+
+.hot-skills h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    padding: 8px 15px;
+    background-color: var(--background-light);
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.skill-tag.high-demand {
+    background-color: var(--accent-light);
+    color: var(--white);
+}
+
+/* Placeholder for sections in development */
+.placeholder-content {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 40px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .dashboard-widgets, 
+    .evaluaciones-cards,
+    .trends-visualization {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        overflow: hidden;
+    }
+    
+    .sidebar-nav a span {
+        display: none;
+    }
+    
+    .sidebar-nav a i {
+        margin-right: 0;
+        font-size: 1.2em;
+    }
+    
+    .sidebar-footer {
+        display: none;
+    }
+    
+    .content-area {
+        margin-left: 60px;
+        padding: 20px;
+    }
+    
+    .event-item {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: center;
+        min-width: auto;
+    }
+    
+    .event-date .day {
+        margin-right: 5px;
+    }
+    
+    .career-match {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .match-percentage {
+        margin: 0 0 15px 0;
+    }
+    
+    .career-stats {
+        justify-content: center;
+    }
+    
+    .career-action {
+        margin: 15px 0 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header .container {
+        padding: 0 10px;
+    }
+    
+    .dashboard-header .logo {
+        font-size: 1.2em;
+    }
+    
+    .user-profile span {
+        display: none;
+    }
+    
+    .content-area {
+        padding: 15px;
+    }
+    
+    .welcome-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+}
+
+/* Asegurar que los estilos específicos del dashboard tengan prioridad */
+.dashboard-header,
+.sidebar,
+.content-area,
+.dashboard-section,
+.widget,
+.chart-container,
+.event-item,
+.evaluaciones-cards,
+.career-match,
+.filter-controls,
+.hot-skills {
+    font-family: "Lato", Arial, Helvetica, sans-serif !important;
+}
