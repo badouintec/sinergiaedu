@@ -1,39 +1,78 @@
-# Sinergia – Integración Tecnológica
+# 🎓 Sinergia EDU - Plataforma Educativa Integral
 
-Sinergia es un proyecto innovador que integra soluciones digitales avanzadas con un enfoque colaborativo. Nuestra misión es transformar la experiencia del usuario mediante tecnología de punta y diseño moderno.
+## 🌟 Acerca del Proyecto
+Sinergia EDU es una plataforma educativa innovadora que integra soluciones digitales avanzadas para mejorar la experiencia de aprendizaje. Nuestro objetivo es transformar la educación mediante tecnología de punta y diseño moderno, creando un ecosistema educativo completo.
 
-## Descripción
-Binary se centra en proveer soluciones digitales de alta calidad con un diseño que resalta el contraste y la legibilidad, ofreciendo una experiencia única a los usuarios.
+## 🚀 Características Principales
+- 📚 **Portal Educativo**: Interfaz moderna y responsive
+- 👩‍🏫 **Sistema de Mentoría**: Conexión directa con mentores profesionales
+- 📊 **Evaluaciones**: Sistema integrado de evaluaciones y seguimiento
+- 💼 **Mercado Laboral**: Vinculación con oportunidades profesionales
+- 🏛️ **Conexión con Universidades**: Red de instituciones educativas
+- 📅 **Gestión de Eventos**: Calendario de eventos y actividades educativas
 
-## Contenido
-- Página principal
-- Sobre Nosotros
-- Contacto
+## 🛠️ Tecnologías Utilizadas
+- HTML5 & CSS3
+- JavaScript (jQuery)
+- Diseño Responsivo (skel.js)
+- Sistema de Grid Moderno
+- Efectos de Scroll Suave
+- Optimización SEO
 
-## Archivos y Carpetas
+## 📂 Estructura del Proyecto
 
-Este folder contiene la plantilla "Sinergia". A continuación se describe brevemente cada uno de los archivos y carpetas principales:
+### 📄 Páginas Principales
+- `index.html` - Página de inicio
+- `mentoria.html` - Sistema de mentoría
+- `evaluaciones.html` - Portal de evaluaciones
+- `eventos.html` - Calendario de eventos
+- `mercado-laboral.html` - Oportunidades laborales
+- `universidades.html` - Red de universidades
+- `historias.html` - Casos de éxito
 
-- **index.html**  
-  Página principal del sitio. Contiene la estructura HTML y referencias a CSS, JS e imágenes.
-  
-- **generic.html**  
-  Página de contenido genérico. (Se espera incluir contenido específico de cada proyecto).
+### 🎨 Recursos
+- **CSS** (`assets/css/`)
+  - `main.css` - Estilos principales
+  - `dashboard.css` - Estilos del panel de control
+  - `font-awesome.min.css` - Iconos y fuentes
 
-- **elements.html**  
-  Página que muestra ejemplos de elementos UI (tipografías, botones, formularios, etc.).
+- **JavaScript** (`assets/js/`)
+  - `main.js` - Funcionalidad principal
+  - `dashboard.js` - Funciones del dashboard
+  - `util.js` - Utilidades generales
+  - `jquery.scrolly.min.js` - Efectos de scroll
+  - `skel.min.js` - Sistema de grid responsivo
 
-- **assets/css/main.css**  
-  Archivo principal de estilos que determina la apariencia del sitio.
+- **Imágenes**
+  - `imagenes/` - Logos e imágenes institucionales
+  - `images/` - Recursos visuales del contenido
 
-- **assets/js/**  
-  - **jquery.min.js**: Librería jQuery.  
-  - **jquery.scrolly.min.js**: Plugin para scroll suave.  
-  - **skel.min.js**: Librería de maquetación responsiva.  
-  - **util.js**: Funciones auxiliares.  
-  - **main.js**: Archivo principal de JavaScript que orquesta el comportamiento interactivo del sitio.
+## 🎯 Objetivos del Proyecto
+1. Facilitar el acceso a educación de calidad
+2. Conectar estudiantes con mentores profesionales
+3. Proporcionar herramientas de evaluación efectivas
+4. Crear puentes entre educación y mercado laboral
+5. Fomentar el networking educativo
 
-- **images/**  
-  Carpeta que contiene las imágenes utilizadas en el template (por ejemplo, pic12.jpg, pic13.jpg, pic14.jpg, etc.).
+## 💡 Uso
+1. Clone el repositorio
+2. Abra `index.html` en su navegador
+3. Explore las diferentes secciones y funcionalidades
+4. Para desarrollo, modifique los archivos CSS/JS según necesidad
 
-Utiliza este README para entender la estructura del proyecto y para facilitar futuras ediciones o integración de funcionalidades.
+## 🤝 Contribución
+¡Contribuciones son bienvenidas! Si deseas mejorar Sinergia EDU:
+1. Haz Fork del proyecto
+2. Crea una nueva rama (`git checkout -b feature/mejora`)
+3. Commit tus cambios (`git commit -m 'Añadir nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/mejora`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+Este proyecto está bajo la licencia Creative Commons Attribution 3.0.
+
+## 📞 Contacto
+Para más información sobre Sinergia EDU, visita nuestra [página principal](index.html).
+
+---
+⭐️ Desarrollado con pasión por el equipo de Sinergia EDU | Última actualización: Junio 2025
