@@ -1589,7 +1589,7 @@
 
 	body {
 		background-color: #fff;
-		color: #444;
+		color: #000000;
 	}
 
 	body, input, select, textarea {
@@ -1949,7 +1949,7 @@
 			input[type="button"].alt.icon:before,
 			button.alt.icon:before,
 			.button.alt.icon:before {
-				color: #bbb;
+				color: #555;
 			}
 
 		input[type="submit"].special,
