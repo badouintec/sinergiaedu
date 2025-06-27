@@ -2511,240 +2511,177 @@
 
 
 
-					.post.style1.invert blockquote {
-						border-left-color: rgba(255, 255, 255, 0.25);
-					}
+ }
 
-					.post.style1.invert code {
-						background: rgba(255, 255, 255, 0.075);
-						border-color: rgba(255, 255, 255, 0.25);
-					}
+	.post.style2 {
+		background-color: #fff;
+		color: #444;
+	}
 
-					.post.style1.invert hr {
-						border-bottom-color: rgba(255, 255, 255, 0.25);
-					}
+		.post.style2 input, .post.style2 select, .post.style2 textarea {
+			color: #105b8d;
+		}
 
-					.post.style1.invert input[type="submit"],
-					.post.style1.invert input[type="reset"],
-					.post.style1.invert input[type="button"],
-					.post.style1.invert button,
-					.post.style1.invert .button {
-						background-color: #fff;
-						color: #1abc9c !important;
-					}
+		.post.style2 a {
+			color: #105b8d;
+		}
 
-						.post.style1.invert input[type="submit"].alt,
-						.post.style1.invert input[type="reset"].alt,
-						.post.style1.invert input[type="button"].alt,
-						.post.style1.invert button.alt,
-						.post.style1.invert .button.alt {
-							background-color: transparent;
-							box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
-							color: #fff !important;
-						}
+		.post.style2 strong, .post.style2 b {
+			color: #105b8d;
+		}
 
-							.post.style1.invert input[type="submit"].alt:hover,
-							.post.style1.invert input[type="reset"].alt:hover,
-							.post.style1.invert input[type="button"].alt:hover,
-							.post.style1.invert button.alt:hover,
-							.post.style1.invert .button.alt:hover {
-								background-color: rgba(255, 255, 255, 0.075);
-							}
+		.post.style2 h1, .post.style2 h2, .post.style2 h3, .post.style2 h4, .post.style2 h5, .post.style2 h6 {
+			color: #105b8d;
+		}
 
-							.post.style1.invert input[type="submit"].alt:active,
-							.post.style1.invert input[type="reset"].alt:active,
-							.post.style1.invert input[type="button"].alt:active,
-							.post.style1.invert button.alt:active,
-							.post.style1.invert .button.alt:active {
-								background-color: rgba(255, 255, 255, 0.2);
-							}
+		.post.style2 blockquote {
+			border-left-color: rgba(144, 144, 144, 0.25);
+		}
 
-							.post.style1.invert input[type="submit"].alt.icon:before,
-							.post.style1.invert input[type="reset"].alt.icon:before,
-							.post.style1.invert input[type="button"].alt.icon:before,
-							.post.style1.invert button.alt.icon:before,
-							.post.style1.invert .button.alt.icon:before {
-								color: rgba(255, 255, 255, 0.5);
-							}
+		.post.style2 code {
+			background: rgba(144, 144, 144, 0.075);
+			border-color: rgba(144, 144, 144, 0.25);
+		}
 
-						.post.style1.invert input[type="submit"].special,
-						.post.style1.invert input[type="reset"].special,
-						.post.style1.invert input[type="button"].special,
-						.post.style1.invert button.special,
-						.post.style1.invert .button.special {
-							background-color: #fff;
-							color: #3498db !important;
-						}
+		.post.style2 hr {
+			border-bottom-color: rgba(144, 144, 144, 0.25);
+		}
 
-				.post.style2 {
-					background-color: #fff;
-					color: #444;
-				}
+		.post.style2 input[type="submit"],
+		.post.style2 input[type="reset"],
+		.post.style2 input[type="button"],
+		.post.style2 button,
+		.post.style2 .button {
+			background-color: #105b8d;
+			color: #fff !important;
+		}
 
-					.post.style2 input, .post.style2 select, .post.style2 textarea {
-						color: #105b8d;
-					}
-
-					.post.style2 a {
-						color: #105b8d;
-					}
-
-					.post.style2 strong, .post.style2 b {
-						color: #105b8d;
-					}
-
-					.post.style2 h1, .post.style2 h2, .post.style2 h3, .post.style2 h4, .post.style2 h5, .post.style2 h6 {
-						color: #105b8d;
-					}
-
-					.post.style2 blockquote {
-						border-left-color: rgba(144, 144, 144, 0.25);
-					}
-
-					.post.style2 code {
-						background: rgba(144, 144, 144, 0.075);
-						border-color: rgba(144, 144, 144, 0.25);
-					}
-
-					.post.style2 hr {
-						border-bottom-color: rgba(144, 144, 144, 0.25);
-					}
-
-					.post.style2 input[type="submit"],
-					.post.style2 input[type="reset"],
-					.post.style2 input[type="button"],
-					.post.style2 button,
-					.post.style2 .button {
-						background-color: #105b8d;
-						color: #fff !important;
-					}
-
-						.post.style2 input[type="submit"]:hover,
-						.post.style2 input[type="reset"]:hover,
-						.post.style2 input[type="button"]:hover,
-						.post.style2 button:hover,
-						.post.style2 .button:hover {
-							background-color: #105b8d;
-						}
-
-						.post.style2 input[type="submit"]:active,
-						.post.style2 input[type="reset"]:active,
-						.post.style2 input[type="button"]:active,
-						.post.style2 button:active,
-						.post.style2 .button:active {
-							background-color: #3498db;
-						}
-
-						.post.style2 input[type="submit"].alt,
-						.post.style2 input[type="reset"].alt,
-						.post.style2 input[type="button"].alt,
-						.post.style2 button.alt,
-						.post.style2 .button.alt {
-							background-color: transparent;
-							box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
-							color: #3498db !important;
-						}
-
-							.post.style2 input[type="submit"].alt:hover,
-							.post.style2 input[type="reset"].alt:hover,
-							.post.style2 input[type="button"].alt:hover,
-							.post.style2 button.alt:hover,
-							.post.style2 .button.alt:hover {
-								background-color: rgba(144, 144, 144, 0.075);
-							}
-
-							.post.style2 input[type="submit"].alt:active,
-							.post.style2 input[type="reset"].alt:active,
-							.post.style2 input[type="button"].alt:active,
-							.post.style2 button.alt:active,
-							.post.style2 .button.alt:active {
-								background-color: rgba(144, 144, 144, 0.2);
-							}
-
-							.post.style2 input[type="submit"].alt.icon:before,
-							.post.style2 input[type="reset"].alt.icon:before,
-							.post.style2 input[type="button"].alt.icon:before,
-							.post.style2 button.alt.icon:before,
-							.post.style2 .button.alt.icon:before {
-								color: #bbb;
-							}
-
-						.post.style2 input[type="submit"].special,
-						.post.style2 input[type="reset"].special,
-						.post.style2 input[type="button"].special,
-						.post.style2 button.special,
-						.post.style2 .button.special {
-							background-color: #3498db;
-							color: #fff !important;
-						}
-
-			.post.style2.invert {
-				background-color: #3498db;
-				color: rgba(255, 255, 255, 0.75);
+			.post.style2 input[type="submit"]:hover,
+			.post.style2 input[type="reset"]:hover,
+			.post.style2 input[type="button"]:hover,
+			.post.style2 button:hover,
+			.post.style2 .button:hover {
+				background-color: #105b8d;
 			}
 
-				.post.style2.invert input, .post.style2.invert select, .post.style2.invert textarea {
-					color: #fff;
+			.post.style2 input[type="submit"]:active,
+			.post.style2 input[type="reset"]:active,
+			.post.style2 input[type="button"]:active,
+			.post.style2 button:active,
+			.post.style2 .button:active {
+				background-color: #3498db;
+			}
+
+			.post.style2 input[type="submit"].alt,
+			.post.style2 input[type="reset"].alt,
+			.post.style2 input[type="button"].alt,
+			.post.style2 button.alt,
+			.post.style2 .button.alt {
+				background-color: transparent;
+				box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
+				color: #3498db !important;
+			}
+
+				.post.style2 input[type="submit"].alt:hover,
+				.post.style2 input[type="reset"].alt:hover,
+				.post.style2 input[type="button"].alt:hover,
+				.post.style2 button.alt:hover,
+				.post.style2 .button.alt:hover {
+					background-color: rgba(144, 144, 144, 0.075);
 				}
 
-				.post.style2.invert a {
-					color: #fff;
+				.post.style2 input[type="submit"].alt:active,
+				.post.style2 input[type="reset"].alt:active,
+				.post.style2 input[type="button"].alt:active,
+				.post.style2 button.alt:active,
+				.post.style2 .button.alt:active {
+					background-color: rgba(144, 144, 144, 0.2);
 				}
 
-				.post.style2.invert strong, .post.style2.invert b {
-					color: #fff;
+				.post.style2 input[type="submit"].alt.icon:before,
+				.post.style2 input[type="reset"].alt.icon:before,
+				.post.style2 input[type="button"].alt.icon:before,
+				.post.style2 button.alt.icon:before,
+				.post.style2 .button.alt.icon:before {
+					color: #bbb;
 				}
 
-				.post.style2.invert h1, .post.style2.invert h2, .post.style2.invert h3, .post.style2.invert h4, .post.style2.invert h5, .post.style2.invert h6 {
-					color: #fff;
+			.post.style2 input[type="submit"].special,
+			.post.style2 input[type="reset"].special,
+			.post.style2 input[type="button"].special,
+			.post.style2 button.special,
+			.post.style2 .button.special {
+				background-color: #3498db;
+				color: #fff !important;
+			}
+
+		.post.style2.invert {
+			background-color: #3498db;
+			color: rgba(255, 255, 255, 0.75);
+		}
+
+			.post.style2.invert input, .post.style2.invert select, .post.style2.invert textarea {
+				color: #fff;
+			}
+
+			.post.style2.invert a {
+				color: #fff;
+			}
+
+			.post.style2.invert strong, .post.style2.invert b {
+				color: #fff;
+			}
+
+			.post.style2.invert h1, .post.style2.invert h2, .post.style2.invert h3, .post.style2.invert h4, .post.style2.invert h5, .post.style2.invert h6 {
+				color: #fff;
+			}
+
+			.post.style2.invert blockquote {
+				border-left-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.post.style2.invert code {
+				background: rgba(255, 255, 255, 0.075);
+				border-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.post.style2.invert hr {
+				border-bottom-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.post.style2.invert input[type="submit"],
+			.post.style2.invert input[type="reset"],
+			.post.style2.invert input[type="button"],
+			.post.style2.invert button,
+			.post.style2.invert .button {
+				background-color: #105b8d;
+				color: #fff !important;
+			}
+
+				.post.style2.invert input[type="submit"]:hover,
+				.post.style2.invert input[type="reset"]:hover,
+				.post.style2.invert input[type="button"]:hover,
+				.post.style2.invert button:hover,
+				.post.style2.invert .button:hover {
+					background-color: #105b8d;
 				}
 
-				.post.style2.invert blockquote {
-					border-left-color: rgba(255, 255, 255, 0.25);
+				.post.style2.invert input[type="submit"]:active,
+				.post.style2.invert input[type="reset"]:active,
+				.post.style2.invert input[type="button"]:active,
+				.post.style2.invert button:active,
+				.post.style2.invert .button:active {
+					background-color: #105b8d;
 				}
 
-				.post.style2.invert code {
-					background: rgba(255, 255, 255, 0.075);
-					border-color: rgba(255, 255, 255, 0.25);
-				}
-
-				.post.style2.invert hr {
-					border-bottom-color: rgba(255, 255, 255, 0.25);
-				}
-
-				.post.style2.invert input[type="submit"],
-				.post.style2.invert input[type="reset"],
+				.post.style2.invert input[type="submit"].alt,
+				.post.style2.invert input[type="reset"].alt,
 				.post.style2.invert input[type="button"],
 				.post.style2.invert button,
 				.post.style2.invert .button {
 					background-color: #105b8d;
 					color: #fff !important;
 				}
-
-					.post.style2.invert input[type="submit"]:hover,
-					.post.style2.invert input[type="reset"]:hover,
-					.post.style2.invert input[type="button"]:hover,
-					.post.style2.invert button:hover,
-					.post.style2.invert .button:hover {
-						background-color: #105b8d;
-					}
-
-					.post.style2.invert input[type="submit"]:active,
-					.post.style2.invert input[type="reset"]:active,
-					.post.style2.invert input[type="button"]:active,
-					.post.style2.invert button:active,
-					.post.style2.invert .button:active {
-						background-color: #105b8d;
-					}
-
-					.post.style2.invert input[type="submit"].alt,
-					.post.style2.invert input[type="reset"].alt,
-					.post.style2.invert input[type="button"],
-					.post.style2.invert button,
-					.post.style2.invert .button {
-						background-color: #105b8d;
-						color: #fff !important;
-					}
 
 /* Modern Header - Mejoras */
 header.modern-header {
@@ -3176,6 +3113,44 @@ header.modern-header nav.main-nav ul li a.active {
         margin-top: 1.5rem;
     }
     .post-flex .image-right img {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Layout para Evaluaciones y Análisis Predictivo */
+.post-flex-left {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+}
+.post-flex-left .image-left {
+    flex: 0 0 48%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.post-flex-left .image-left img {
+    width: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+.post-flex-left .content {
+    flex: 1 1 0;
+}
+@media (max-width: 900px) {
+    .post-flex-left {
+        flex-direction: column;
+    }
+    .post-flex-left .image-left {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    .post-flex-left .image-left img {
         max-width: 100%;
         min-width: 0;
     }
