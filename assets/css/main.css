@@ -8,7 +8,7 @@
 	Released under the Creative Commons Attribution 3.0 license (your-license-link)
 */
 
-/* Reset */
+/*1. Reset, eliminamos estilos por defecto del navegador */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -52,7 +52,7 @@
 		-webkit-text-size-adjust: none;
 	}
 
-/* Box Model */
+/* 2. Box Model,Asegura que el tamaño de los elementos incluya el padding y el borde en el cálculo de su ancho y alto */
 
 	*, *:before, *:after {
 		-moz-box-sizing: border-box;
@@ -60,7 +60,7 @@
 		box-sizing: border-box;
 	}
 
-/* Containers */
+/*3. Containers Define el ancho y el comportamiento de los contenedores principales (.container) para diferentes tamaños de pantalla (responsive). */
 
 	.container {
 		margin-left: auto;
@@ -219,7 +219,7 @@
 
 	}
 
-/* Grid */
+/*4. Grid: Establece el sistema de filas y columnas para organizar el contenido en la página. */
 
 	.row {
 		border-bottom: solid 1px transparent;
@@ -1787,7 +1787,7 @@
 		border-color: rgba(144, 144, 144, 0.25);
 	}
 
-/* Button */
+/*5. Button Estilos para todos los botones (.button, button, input[type="button"], etc.), incluyendo colores, bordes, efectos al pasar el mouse y variantes como .special o .alt. */
 
 	input[type="submit"],
 	input[type="reset"],
@@ -1977,7 +1977,7 @@
 				background-color: #258cd1;
 			}
 
-/* Form */
+/*6. Form, Estilos para formularios, inputs, selects, textareas y etiquetas (label). */
 
 	form {
 		margin: 0 0 2em 0;
@@ -2215,7 +2215,7 @@
 		color: #bbb !important;
 	}
 
-/* Icon */
+/*7. Icon, Estilos para iconos, usando la clase .icon. */
 
 	.icon {
 		text-decoration: none;
@@ -2264,7 +2264,7 @@
 
 		}
 
-/* Image */
+/*8. Image Estilos para imágenes y sus variantes (.image, .image.left, .image.right, .image.fit, etc.). */
 
 	.image {
 		border: 0;
@@ -2316,7 +2316,7 @@
 				width: 100%;
 			}
 
-/* List */
+/*9. List, Estilos para listas ordenadas (ol), listas no ordenadas (ul), listas de acciones (.actions), listas de iconos (.icons), etc. */
 
 	ol {
 		list-style: decimal;
@@ -2492,7 +2492,7 @@
 		border-top-color: rgba(144, 144, 144, 0.25);
 	}
 
-/* Section/Article */
+/*10. Section/ Article, Estilos para secciones y artículos, incluyendo encabezados y párrafos dentro de ellos.*/
 
 	section.special, article.special {
 		text-align: center;
@@ -2524,7 +2524,7 @@
 		color: #bbb;
 	}
 
-/* Table */
+/*11. Table, Estilos para tablas (table, th, td, etc.).*/
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
@@ -2611,7 +2611,7 @@
 		border-color: rgba(144, 144, 144, 0.25);
 	}
 
-/* Wrapper */
+/* 12. Wrapper, Estilos para los contenedores principales de cada sección (.wrapper, .wrapper.style1, .wrapper.style2, etc.).*/
 
 	.wrapper {
 		position: relative;
@@ -3054,7 +3054,7 @@
 
 		}
 
-/* Header */
+/*13. Header, Estilos para el header principal (header.modern-header), incluyendo el logo, navegación y comportamiento responsive*/
 
 	body {
 		padding-top: 4.125em;
@@ -3180,7 +3180,7 @@
 
 	}
 
-/* Menu */
+/*14. Menu Estilos para el menú lateral o móvil (#menu), incluyendo animaciones y responsive.*/
 
 	#menu {
 		-moz-transform: translateX(100%);
@@ -3303,7 +3303,7 @@
 
 		}
 
-/* Banner */
+/*15. Banner, Estilos para la sección de bienvenida o banner principal (#banner), incluyendo botones y textos.*/
 
 	#banner {
 		background-color: #3498db;
@@ -3570,7 +3570,7 @@
 
 		}
 
-/* Main */
+/*16. Main, Estilos para el contenido principal (#main), incluyendo posts y sus variantes.*/
 
 	#main {
 		padding: 4em 0 2em 0;
@@ -4144,7 +4144,7 @@
 						color: #fff !important;
 					}
 
-/* Modern Header - Mejoras */
+/*17. Modern Header - Mejoras */
 header.modern-header {
 	background: #388be6;
 	backdrop-filter: blur(8px);
@@ -4206,7 +4206,7 @@ header.modern-header nav.main-nav ul li a.active {
 	background-color: var(--secondary-orange);
 }
 
-/* Responsive menu */
+/*18. Responsive menu */
 @media screen and (max-width: 736px) {
 	header.modern-header {
 		background: #388be6;
@@ -4239,13 +4239,13 @@ header.modern-header nav.main-nav ul li a.active {
 	}
 }
 
-/* Fix body spacing issue */
+/*19. Fix body spacing issue */
 body {
     padding-top: 0;
     margin: 0;
 }
 
-/* Modern Header - Mejoras completas */
+/*20.  Modern Header - Mejoras completas */
 header.modern-header {
     background: #388be6;
     backdrop-filter: blur(8px);
@@ -4322,7 +4322,7 @@ header.modern-header nav.main-nav ul li a.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajuste para secciones que siguen al header */
+/*21.  Ajuste para secciones que siguen al header */
 #banner, #main, section.wrapper {
     padding-top: 4.25em;
     position: relative;
@@ -4332,7 +4332,7 @@ header.modern-header nav.main-nav ul li a.active {
     margin-top: 0;
 }
 
-/* Section Headers */
+/*22.  Section Headers */
 .section-header {
     text-align: center;
     margin-bottom: 3em;
@@ -4351,7 +4351,7 @@ header.modern-header nav.main-nav ul li a.active {
     margin: 0 auto;
 }
 
-/* Team Section */
+/*23. Team Section */
 .team-container {
     display: flex;
     flex-wrap: wrap;
@@ -4445,7 +4445,7 @@ header.modern-header nav.main-nav ul li a.active {
     margin-bottom: 0.5em;
 }
 
-/* Contact Section */
+/*24. Contact Section */
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -4542,7 +4542,7 @@ header.modern-header nav.main-nav ul li a.active {
     margin-top: 1em;
 }
 
-/* Responsive Styles */
+/*25.  Responsive Styles */
 @media screen and (max-width: 980px) {
     .team-member {
         flex: 0 0 calc(50% - 2em);
@@ -4566,14 +4566,14 @@ header.modern-header nav.main-nav ul li a.active {
     }
 }
 
-/* Active Menu Item - Fix */
+/*26. Active Menu Item - Fix */
 header.modern-header nav.main-nav ul li a.active {
     color: white;
     background-color: #1abc9c;
     box-shadow: 0 2px 10px rgba(26, 188, 156, 0.3);
 }
 
-/* Definición de variables de colores al principio del archivo */
+/*27. Definición de variables de colores al principio del archivo */
 :root {
     --azul-principal: #1c6cd4; 
     --azul-claro: #4A90E2;
@@ -4587,7 +4587,7 @@ header.modern-header nav.main-nav ul li a.active {
     --gris-oscuro: #333333;
 }
 
-/* Enlaces y elementos base */
+/*28. Enlaces y elementos base */
 a {
     color: var(--azul-principal);
 }
@@ -4601,7 +4601,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--azul-principal);
 }
 
-/* Botones */
+/*29. Botones */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -4644,7 +4644,7 @@ button.special:hover,
     background-color: var(--azul-claro);
 }
 
-/* Header y navegación */
+/*30. Header y navegación */
 header.modern-header {
     background: #388be6;
     backdrop-filter: blur(8px);
@@ -4658,13 +4658,13 @@ header.modern-header nav.main-nav ul li a.active {
     box-shadow: 0 2px 10px rgba(244, 123, 32, 0.3);
 }
 
-/* Banner */
+/*31. Banner */
 #banner {
     background-color: var(--azul-principal);
     /* ...existing code... */
 }
 
-/* Secciones - Estilo 1 */
+/*32. Secciones - Estilo 1 */
 .wrapper.style1 h1, 
 .wrapper.style1 h2, 
 .wrapper.style1 h3, 
@@ -4682,7 +4682,7 @@ header.modern-header nav.main-nav ul li a.active {
     color: var(--azul-claro);
 }
 
-/* Secciones - Estilo 2 */
+/*33. Secciones - Estilo 2 */
 .wrapper.style2 h1, 
 .wrapper.style2 h2, 
 .wrapper.style2 h3, 
@@ -4700,7 +4700,7 @@ header.modern-header nav.main-nav ul li a.active {
     color: var(--azul-claro);
 }
 
-/* Equipo y About */
+/*34. Equipo y About */
 .team-member h3 {
     color: var(--azul-principal);
 }
@@ -4725,7 +4725,7 @@ header.modern-header nav.main-nav ul li a.active {
     color: var(--azul-principal);
 }
 
-/* Contact */
+/*35. Contact */
 .contact-form label {
     color: var(--azul-principal);
 }
@@ -4738,12 +4738,12 @@ header.modern-header nav.main-nav ul li a.active {
     color: var(--azul-principal);
 }
 
-/* Section Headers */
+/*36. Section Headers*/
 .section-header h2 {
     color: var(--azul-principal);
 }
 
-/* Posts */
+/*37. Posts, Estilos para las tarjetas o bloques de contenido (.post, .post.style1, .post.style2, etc.), incluyendo colores, fondos y variantes invertidas.*/
 .post.style1 h1, 
 .post.style1 h2, 
 .post.style1 h3, 
@@ -4787,7 +4787,7 @@ header.modern-header nav.main-nav ul li a.active {
     background-color: var(--azul-oscuro);
 }
 
-/* Footer - Centrado de elementos */
+/*38. Footer - Centrado de elementos, Estilos para el pie de página (#footer), iconos y copyright. */
 #footer {
     text-align: center;
     padding: 2em 0;
@@ -4808,7 +4808,7 @@ header.modern-header nav.main-nav ul li a.active {
     color: var(--gris-medio);
 }
 
-/* Corrección de contraste para post invertidos */
+/*39. Corrección de contraste para post invertidos */
 .post.invert.style2.alt {
     background-color: var(--azul-principal); /* Aseguramos fondo oscuro */
 }
@@ -4826,7 +4826,7 @@ header.modern-header nav.main-nav ul li a.active {
     color: white; /* Garantizamos que todo el texto sea blanco */
 }
 
-/* Específico para la sección de Perspectivas Laborales */
+/*40. Específico para la sección de Perspectivas Laborales */
 #four.post .content {
     color: var(--gris-oscuro);
 }
@@ -4837,7 +4837,7 @@ header.modern-header nav.main-nav ul li a.active {
     color: inherit; /* Heredar del elemento padre para asegurar contraste */
 }
 
-/* Mobile menu toggle button */
+/*41. Mobile menu toggle button */
 .mobile-nav-toggle {
     display: none;
     background: transparent;
@@ -4867,7 +4867,7 @@ header.modern-header nav.main-nav ul li a.active {
     border: 0;
 }
 
-/* Mobile menu */
+/*42. Mobile menu */
 body.is-menu-visible {
     overflow: hidden;
 }
@@ -4946,7 +4946,7 @@ body.is-menu-visible #menu {
     color: #fff;
 }
 
-/* Responsive */
+/*43. Responsive */
 @media screen and (max-width: 736px) {
     .main-nav {
         display: none;
@@ -4957,6 +4957,7 @@ body.is-menu-visible #menu {
     }
 }
 
+/*44. Brillo el logo lol*/
 .logo:hover img {
     filter: brightness(1.5) drop-shadow(0 0 8px #fff);
     transition: filter 0.3s;
