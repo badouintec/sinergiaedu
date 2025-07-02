@@ -15,17 +15,16 @@
     <header class="dashboard-header">
         <div class="container">
             <a class="logo" href="index.html">
-                    <img src="images\sinergia_logo_seg.svg" alt="Logo Sinergia" style="height:40px; vertical-align:middle; margin-right:8px;">
-                    Sinergia
-                </a>
-
+                <img src="images/sinergia_logo_seg.svg" alt="Logo Sinergia" style="height:40px; vertical-align:middle; margin-right:8px;">
+                Sinergia
+            </a>
             <div class="user-area">
                 <div class="notifications">
                     <a href="#" class="icon"><i class="fas fa-bell"></i></a>
                     <span class="badge">3</span>
                 </div>
                 <div class="user-profile">
-                    <img src="images\icono mujer.webp" alt="Usuario">
+                    <img src="images/icono mujer.webp" alt="Usuario">
                     <span>Marcela García</span>
                 </div>
             </div>
@@ -54,26 +53,28 @@
         </div>
 
         <!-- Main Content Area -->
-        <div class="content-area">
-            <div class="section-header">
-                <h2>Historias de Éxito</h2>
-                <p>Descubre las experiencias inspiradoras de otros estudiantes</p>
+        <!-- Featured Stories -->
+        <div class="featured-story">
+            <div class="featured-story-image">
+                <img src="images/inspo.jpg" alt="Historia destacada">
             </div>
-            
-            <!-- Featured Stories -->
-            <div class="featured-story">
-                <div class="story-image">
-                    <img src="images\inspo.jpg" alt="Historia destacada">
-                </div>
-                <div class="story-content">
-                    <div class="story-tag">Historia Destacada</div>
-                    <h3>De estudiante a líder: Mi camino hacia Google</h3>
-                    <p class="story-meta">Por Alejandra Vázquez, Ingeniera de Software en Google</p>
-                    <p class="story-excerpt">Cuando me gradué de bachillerato, no tenía idea de qué carrera seguir. Sinergia me ayudó a identificar mis fortalezas en lógica y creatividad, guiándome hacia la programación, algo que ni siquiera había considerado...</p>
-                    <blockquote>"El momento que cambió mi vida fue cuando mi mentor de Sinergia me animó a participar en un hackathon. Gané el tercer lugar y eso me abrió puertas que nunca imaginé posibles."</blockquote>
-                    <a href="#" class="button special">Leer Historia Completa</a>
-                </div>
+            <div class="featured-story-content">
+                <div class="story-tag"><i class="fas fa-star"></i> Historia Destacada</div>
+                <h3>De estudiante a líder: Mi camino hacia Google</h3>
+                <p class="story-meta">
+                    <i class="fas fa-user"></i> Alejandra Vázquez &nbsp;|&nbsp; 
+                    <i class="fas fa-briefcase"></i> Ingeniera de Software en Google
+                </p>
+                <p class="story-excerpt">
+                    Cuando me gradué de bachillerato, no tenía idea de qué carrera seguir. Sinergia me ayudó a identificar mis fortalezas en lógica y creatividad, guiándome hacia la programación, algo que ni siquiera había considerado...
+                </p>
+                <blockquote>
+                    <i class="fas fa-quote-left"></i>
+                    El momento que cambió mi vida fue cuando mi mentor de Sinergia me animó a participar en un hackathon. Gané el tercer lugar y eso me abrió puertas que nunca imaginé posibles.
+                </blockquote>
+                <a href="#" class="button special">Leer Historia Completa</a>
             </div>
+        </div>
             
             <!-- Story Categories -->
             <div class="story-categories">
@@ -88,7 +89,7 @@
             <div class="story-grid">
                 <div class="story-card carrera">
                     <div class="story-card-image">
-                        <img src="images\inspo.jpg" alt="Historia">
+                        <img src="images/inspo.jpg" alt="Historia">
                     </div>
                     <div class="story-card-content">
                         <div class="story-category">Cambio de Carrera</div>
@@ -106,7 +107,7 @@
                 
                 <div class="story-card emprendedor">
                     <div class="story-card-image">
-                        <img src="images\inspo.jpg" alt="Historia">
+                        <img src="images/inspo.jpg" alt="Historia">
                     </div>
                     <div class="story-card-content">
                         <div class="story-category">Emprendedor</div>
@@ -124,7 +125,7 @@
                 
                 <div class="story-card internacional">
                     <div class="story-card-image">
-                        <img src="images\inspo.jpg" alt="Historia">
+                        <img src="images/inspo.jpg" alt="Historia">
                     </div>
                     <div class="story-card-content">
                         <div class="story-category">Internacional</div>
@@ -142,7 +143,7 @@
                 
                 <div class="story-card tecnologia">
                     <div class="story-card-image">
-                        <img src="images\inspo.jpg" alt="Historia">
+                        <img src="images/inspo.jpg" alt="Historia">
                     </div>
                     <div class="story-card-content">
                         <div class="story-category">Tecnología</div>
@@ -159,6 +160,11 @@
                 </div>
             </div>
             
+            <!-- Mensaje si no hay historias -->
+            <div id="no-stories-message" style="display:none; text-align:center; color:#888; padding:32px 0; font-size:1.2em;">
+                No hay historias para esta categoría.
+            </div>
+            
             <!-- Testimonials -->
             <div class="testimonials-section">
                 <h3>Lo que dicen nuestros usuarios</h3>
@@ -168,7 +174,7 @@
                             <p>"Sinergia transformó mi manera de ver mi futuro profesional. La evaluación vocacional realmente reflejó mis intereses y habilidades de una forma que nunca había visto antes."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images\inspo.jpg" alt="Testimonial Author">
+                            <img src="images/inspo.jpg" alt="Testimonial Author">
                             <div class="author-info">
                                 <h4>Pedro Morales</h4>
                                 <p>Estudiante de Ingeniería Informática</p>
@@ -181,7 +187,7 @@
                             <p>"Lo que más valoro de Sinergia es el programa de mentoría. Mi mentor no solo me guió en decisiones académicas, sino que me presentó a contactos importantes en la industria."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images\inspo.jpg" alt="Testimonial Author">
+                            <img src="images/inspo.jpg" alt="Testimonial Author">
                             <div class="author-info">
                                 <h4>Sofía Ramírez</h4>
                                 <p>Diseñadora UX/UI</p>
@@ -194,7 +200,7 @@
                             <p>"Gracias a los análisis de mercado laboral de Sinergia pude enfocarme en desarrollar habilidades con alta demanda, lo que me ayudó a conseguir mi primer trabajo en tiempo récord."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images\inspo.jpg" alt="Testimonial Author">
+                            <img src="images/inspo.jpg" alt="Testimonial Author">
                             <div class="author-info">
                                 <h4>Martín López</h4>
                                 <p>Analista de Datos Junior</p>
@@ -210,26 +216,20 @@
                 </div>
             </div>
         </div>
-        <div id="no-stories-message" style="display:none; text-align:center; color:#888; padding:32px 0; font-size:1.2em;">
-            No hay historias para esta categoría.
-        </div>
     </div>
 
     <!-- Scripts -->
     <script src="assets/js/util.js"></script>
     <script src="assets/js/dashboard.js"></script>
     <script>
+    // Filtro de historias por categoría
     document.querySelectorAll('.category-tab').forEach(function(tab) {
         tab.addEventListener('click', function() {
-            // Quitar clase activa de todos los tabs
             document.querySelectorAll('.category-tab').forEach(function(t) {
                 t.classList.remove('active');
             });
-            // Activar el tab seleccionado
             this.classList.add('active');
-            // Obtener la categoría seleccionada
             var cat = this.getAttribute('data-category');
-            // Mostrar/ocultar historias según la categoría
             var found = false;
             document.querySelectorAll('.story-card').forEach(function(card) {
                 if (cat === 'all') {
@@ -242,7 +242,6 @@
                     card.style.display = 'none';
                 }
             });
-            // Mensaje si no hay historias (opcional)
             var msg = document.getElementById('no-stories-message');
             if (msg) {
                 msg.style.display = found ? 'none' : 'block';

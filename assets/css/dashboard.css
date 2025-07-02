@@ -1721,4 +1721,117 @@ body.dashboard-body {
 }
 
 
+/* Imágenes de mentor del mismo tamaño */
+.mentor-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 16px auto;
+    background: #f4f8fd;
+}
 
+
+/* Featured Story Mejorado */
+.featured-story {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(56, 139, 230, 0.10);
+    margin-bottom: 40px;
+    overflow: hidden;
+    align-items: stretch;
+    min-height: 320px;
+}
+
+.featured-story-image {
+    flex: 1 1 320px;
+    min-width: 320px;
+    max-width: 420px;
+    background: #f4f8fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 320px;
+    display: block;
+}
+
+.featured-story-content {
+    flex: 2 1 400px;
+    padding: 38px 36px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-tag {
+    background: #388be6;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.featured-story-content h3 {
+    margin-top: 0;
+    color: #2563b6;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.story-meta {
+    color: #888;
+    font-size: 1.08em;
+    margin-bottom: 14px;
+}
+
+.story-excerpt {
+    font-size: 1.12em;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+.featured-story-content blockquote {
+    background: #f4f8fd;
+    border-left: 4px solid #388be6;
+    margin: 18px 0;
+    padding: 14px 20px;
+    color: #2563b6;
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 1.08em;
+    position: relative;
+}
+
+.featured-story-content blockquote i {
+    color: #388be6;
+    margin-right: 8px;
+}
+
+@media (max-width: 900px) {
+    .featured-story {
+        flex-direction: column;
+    }
+    .featured-story-image,
+    .featured-story-image img {
+        min-width: 100%;
+        max-width: 100%;
+        height: 220px;
+        min-height: 220px;
+    }
+    .featured-story-content {
+        padding: 22px 14px;
+    }
+}
