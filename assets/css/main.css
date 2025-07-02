@@ -1925,7 +1925,7 @@
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
-			color: #555 !important;
+			color: #1abc9c !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -1958,7 +1958,7 @@
 		button.special,
 		.button.special {
 			background-color: var(--azul-principal);
-			color: #fff !important;
+			color: #e0d7dc; !important;
 		}
 
 			input[type="submit"].special:hover,
@@ -2900,7 +2900,7 @@
 				.wrapper.style2 .button.alt {
 					background-color: transparent;
 					box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
-					color: #3498db !important;
+					color: #1abc9c !important;
 				}
 
 					.wrapper.style2 input[type="submit"].alt:hover,
@@ -3410,8 +3410,8 @@
 			#banner input[type="button"].special,
 			#banner button.special,
 			#banner .button.special {
-				background-color: #fff;
-				color: #3498db !important;
+				background-color: #fc5414;
+				color: #fff !important;
 			}
 
 		#banner label {
