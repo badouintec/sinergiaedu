@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="assets/js/jquery.min.js"></script>
-    
     <style>
     /* Calendario interactivo y modal */
     .event-dot {
@@ -50,25 +49,64 @@
         color: #388be6;
         cursor: pointer;
     }
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        margin-top: 20px;
+    }
+    .calendar-day {
+        background: #fff;
+        border-radius: 6px;
+        min-height: 60px;
+        padding: 8px 6px;
+        text-align: left;
+        font-size: 1em;
+        position: relative;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+    }
+    .calendar-day.header {
+        background: transparent;
+        box-shadow: none;
+        font-weight: bold;
+        color: #388be6;
+        text-align: center;
+        cursor: default;
+    }
+    .calendar-day.inactive {
+        background: #f4f4f4;
+        color: #bbb;
+        cursor: default;
+    }
+    .calendar-day.has-event {
+        border: 2px solid #388be6;
+    }
+    .calendar-day.today {
+        border: 2px solid #f47b20;
+    }
+    .calendar-day:hover:not(.header):not(.inactive) {
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+        z-index: 2;
+    }
     </style>
 </head>
-
 <body class="dashboard-body">
     <!-- Header -->
     <header class="dashboard-header">
         <div class="container">
             <a class="logo" href="index.html">
-                    <img src="images\sinergia_logo_seg.svg" alt="Logo Sinergia" style="height:40px; vertical-align:middle; margin-right:8px;">
-                    Sinergia
-                </a>
-
+                <img src="images/sinergia_logo_seg.svg" alt="Logo Sinergia" style="height:40px; vertical-align:middle; margin-right:8px;">
+                Sinergia
+            </a>
             <div class="user-area">
                 <div class="notifications">
                     <a href="#" class="icon"><i class="fas fa-bell"></i></a>
                     <span class="badge">3</span>
                 </div>
                 <div class="user-profile">
-                    <img src="images\icono mujer.webp" alt="Usuario">
+                    <img src="images/icono mujer.webp" alt="Usuario">
                     <span>Marcela García</span>
                 </div>
             </div>
@@ -209,7 +247,7 @@
                     <p><strong>Tipo:</strong> <span id="modal-type"></span></p>
                     <p id="modal-desc"></p>
                 </div>
-            
+            </div>
             <!-- Featured Events -->
             <div class="featured-events">
                 <h3>Eventos Destacados</h3>
@@ -390,7 +428,7 @@
                     
                     <div class="community-card">
                         <div class="community-image">
-                            <img src="images\evennt.jpeg" alt="Evento comunitario">
+                            <img src="images/evennt.jpeg" alt="Evento comunitario">
                         </div>
                         <div class="community-content">
                             <h4>WomenTechMakers: Liderando en tecnología</h4>
@@ -405,7 +443,7 @@
                     
                     <div class="community-card">
                         <div class="community-image">
-                            <img src="images\eventos_tecno.jpg" alt="Evento comunitario">
+                            <img src="images/eventos_tecno.jpg" alt="Evento comunitario">
                         </div>
                         <div class="community-content">
                             <h4>Data Science Summit 2023</h4>
