@@ -1958,7 +1958,7 @@
 		button.special,
 		.button.special {
 			background-color: var(--azul-principal);
-			color: #e0d7dc; !important;
+			color: #e0d7dc !important;
 		}
 
 			input[type="submit"].special:hover,

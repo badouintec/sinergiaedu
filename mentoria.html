@@ -12,43 +12,71 @@
 </head>
 <body class="dashboard-body">
     <!-- Header -->
-    <header class="modern-header">
+    <header class="dashboard-header">
         <div class="container">
-            <a class="logo" href="index.html">Sinergia</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="demo.html">Inicio</a></li>
-                    <li><a href="mentoria.html" class="active">Mentoría</a></li>
-                    <li><a href="universidades.html">Universidades</a></li>
-                    <li><a href="historias.html">Historias</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <section id="mentoria" class="wrapper style1">
-        <div class="inner">
-            <header class="section-header">
-                <h2>Mentoría</h2>
-                <p>Conecta con mentores que te guiarán en tu desarrollo profesional.</p>
-            </header>
-            <div class="mentors">
-                <div class="mentor-card">
-                    <img src="images/mentor1.jpg" alt="Mentor">
-                    <h3>Carlos Mendoza</h3>
-                    <p>Especialista en Ciencia de Datos</p>
-                    <a href="#" class="button special">Agendar Sesión</a>
+            <a class="logo" href="index.html">
+                <img src="images/sinergia_logo_seg.svg" alt="Logo Sinergia" style="height:40px; vertical-align:middle; margin-right:8px;">
+                Sinergia
+            </a>
+            <div class="user-area">
+                <div class="notifications">
+                    <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                    <span class="badge">3</span>
                 </div>
-                <div class="mentor-card">
-                    <img src="images/mentor2.jpg" alt="Mentor">
-                    <h3>Laura Jiménez</h3>
-                    <p>Psicóloga Educativa</p>
-                    <a href="#" class="button special">Agendar Sesión</a>
+                <div class="user-profile">
+                    <img src="images/icono mujer.webp" alt="Usuario">
+                    <span>Marcela García</span>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="demo.html"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li><a href="evaluaciones.html"><i class="fas fa-chart-pie"></i> <span>Evaluaciones</span></a></li>
+                    <li><a href="mercado-laboral.html"><i class="fas fa-briefcase"></i> <span>Mercado Laboral</span></a></li>
+                    <li class="active"><a href="mentoria.html"><i class="fas fa-users"></i> <span>Mentoría</span></a></li>
+                    <li><a href="universidades.html"><i class="fas fa-university"></i> <span>Universidades</span></a></li>
+                    <li><a href="historias.html"><i class="fas fa-book-open"></i> <span>Historias</span></a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> <span>Eventos</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#configuracion"><i class="fas fa-cog"></i> <span>Configuración</span></a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Salir</span></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <section id="mentoria" class="wrapper style1">
+                <div class="inner">
+                    <header class="section-header">
+                        <h2>Mentoría</h2>
+                        <p>Conecta con mentores que te guiarán en tu desarrollo profesional.</p>
+                    </header>
+                    <div class="mentors">
+                        <div class="mentor-card">
+                            <img src="images/mentor1.jpg" alt="Mentor">
+                            <h3>Carlos Mendoza</h3>
+                            <p>Especialista en Ciencia de Datos</p>
+                            <a href="#" class="button special">Agendar Sesión</a>
+                        </div>
+                        <div class="mentor-card">
+                            <img src="images/mentor2.jpg" alt="Mentor">
+                            <h3>Laura Jiménez</h3>
+                            <p>Psicóloga Educativa</p>
+                            <a href="#" class="button special">Agendar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer id="footer">
