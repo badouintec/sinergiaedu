@@ -511,15 +511,25 @@
             // Obtener la categoría seleccionada
             var cat = this.getAttribute('data-category');
             // Mostrar/ocultar eventos según la categoría
+            var found = false;
             document.querySelectorAll('.event-list-item').forEach(function(item) {
                 if (cat === 'all') {
                     item.style.display = '';
+                    found = true;
                 } else if (item.classList.contains(cat)) {
                     item.style.display = '';
+                    found = true;
                 } else {
                     item.style.display = 'none';
                 }
             });
+            // Mostrar mensaje si no hay eventos
+            var msg = document.getElementById('no-events-message');
+            if (!found) {
+                msg.style.display = 'block';
+            } else {
+                msg.style.display = 'none';
+            }
         });
     });
     </script>
