@@ -4146,7 +4146,7 @@
 
 /* Modern Header - Mejoras */
 header.modern-header {
-	background: rgba(30, 144, 255, 0.95); /* Usar el color azul principal con transparencia */
+	background: #388be6;
 	backdrop-filter: blur(8px);
 	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
@@ -4209,6 +4209,7 @@ header.modern-header nav.main-nav ul li a.active {
 /* Responsive menu */
 @media screen and (max-width: 736px) {
 	header.modern-header {
+		background: #388be6;
 		padding: 0 1em;
 	}
 	
@@ -4246,7 +4247,7 @@ body {
 
 /* Modern Header - Mejoras completas */
 header.modern-header {
-    background: rgba(30, 144, 255, 0.95);
+    background: #388be6;
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -4574,7 +4575,7 @@ header.modern-header nav.main-nav ul li a.active {
 
 /* Definición de variables de colores al principio del archivo */
 :root {
-    --azul-principal: #1E5F9A;
+    --azul-principal: #1c6cd4; 
     --azul-claro: #4A90E2;
     --azul-oscuro: #0D2C54;
     --naranja-principal: #F47B20;
@@ -4645,8 +4646,10 @@ button.special:hover,
 
 /* Header y navegación */
 header.modern-header {
-    background: var(--azul-principal);
-    /* ...existing code... */
+    background: #388be6;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    padding: 0 2em;
 }
 
 header.modern-header nav.main-nav ul li a.active {

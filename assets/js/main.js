@@ -102,7 +102,7 @@
                 header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
                 header.style.height = "3.5em";
             } else {
-                header.style.background = "#1E5F9A"; // Color azul principal
+                header.style.background =" #388be6";
                 header.style.boxShadow = "0 2px 15px rgba(0, 0, 0, 0.1)";
                 header.style.height = "4.25em";
             }

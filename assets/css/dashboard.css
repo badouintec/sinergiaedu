@@ -1,10 +1,10 @@
 /* Variables y colores del sistema */
 :root {
-    --azul-principal: #1E5F9A;
-    --azul-claro: #4A90E2;
+    --azul-principal: #1f6fd1; 
+    --azul-claro: #000000;
     --azul-oscuro: #0D2C54;
-    --naranja-principal: #F47B20;
-    --naranja-claro: #FF9D5C;
+    --naranja-principal: #FE5614;
+    --naranja-claro: #FFD6C2; 
     --naranja-oscuro: #C25608;
     --sidebar-width: 250px;
     --header-height: 60px;
@@ -14,7 +14,7 @@
     --accent-color: var(--naranja-principal);
     --accent-light: var(--naranja-claro);
     --accent-dark: var(--naranja-oscuro);
-    --text-color: #333333;
+    --text-color: #2B2B2B; 
     --text-light: #777777;
     --background-light: #f8f9fa;
     --border-color: #e0e0e0;
@@ -30,7 +30,7 @@ body.dashboard-body {
     padding-top: 0 !important;
     margin-top: 0 !important;
     overflow-x: hidden;
-    background-color: #f8f9fa;
+    background-color: #F9F9F9;
 }
 
 .dashboard-header {
