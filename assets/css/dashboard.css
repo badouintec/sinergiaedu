@@ -1620,3 +1620,20 @@ body.dashboard-body {
     text-align: center;
     margin-top: 32px;
 }
+
+/* Cambia el color de los botones de navegación del calendario */
+.month-nav {
+    background: #388be6;    /* Cambia este color por el que prefieras */
+    color: #fff;            /* Color del texto/icono */
+    border: none;
+    border-radius: 6px;
+    padding: 16px 18px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.month-nav:hover {
+    background: #2563b6;    /* Color al pasar el mouse */
+}
