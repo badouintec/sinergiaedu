@@ -1331,3 +1331,93 @@ body.dashboard-body {
 .hot-skills {
     font-family: "Lato", Arial, Helvetica, sans-serif !important;
 }
+
+
+
+
+
+/* Puntos de evento */
+.event-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.event-dot.workshop { background: #1abc9c; }
+.event-dot.webinar { background: #388be6; }
+.event-dot.networking { background: #f47b20; }
+.event-dot.conference { background: #e74c3c; }
+.event-dot.hackathon { background: #9b59b6; }
+.event-dot.recruitment { background: #f1c40f; }
+
+/* Modal de evento */
+.event-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+}
+.event-modal-content {
+    background: #fff;
+    margin: 8% auto;
+    padding: 2em;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+.event-modal-close {
+    position: absolute;
+    top: 12px; right: 18px;
+    font-size: 2em;
+    color: #388be6;
+    cursor: pointer;
+}
+
+
+/* Calendario en grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+.calendar-day {
+    background: #fff;
+    border-radius: 6px;
+    min-height: 60px;
+    padding: 8px 6px;
+    text-align: left;
+    font-size: 1em;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+.calendar-day.header {
+    background: transparent;
+    box-shadow: none;
+    font-weight: bold;
+    color: #388be6;
+    text-align: center;
+    cursor: default;
+}
+.calendar-day.inactive {
+    background: #f4f4f4;
+    color: #bbb;
+    cursor: default;
+}
+.calendar-day.has-event {
+    border: 2px solid #388be6;
+}
+.calendar-day.today {
+    border: 2px solid #f47b20;
+}
+.calendar-day:hover:not(.header):not(.inactive) {
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+    z-index: 2;
+}

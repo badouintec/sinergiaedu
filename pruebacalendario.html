@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Eventos - Sinergia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <style>
+    /* Calendario interactivo y modal */
+    .event-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+    .event-dot.workshop { background: #1abc9c; }
+    .event-dot.webinar { background: #388be6; }
+    .event-dot.networking { background: #f47b20; }
+    .event-dot.conference { background: #e74c3c; }
+    .event-dot.hackathon { background: #9b59b6; }
+    .event-dot.recruitment { background: #f1c40f; }
+    .event-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0; top: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.5);
+    }
+    .event-modal-content {
+        background: #fff;
+        margin: 8% auto;
+        padding: 2em;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+    }
+    .event-modal-close {
+        position: absolute;
+        top: 12px; right: 18px;
+        font-size: 2em;
+        color: #388be6;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body class="dashboard-body">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="images/sinergia_logo_seg.svg" alt="Logo Sinergia" style="height:40px; vertical-align:middle; margin-right:8px;">
+                Sinergia
+            </a>
+            <div class="user-area">
+                <div class="notifications">
+                    <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/icono mujer.webp" alt="Usuario">
+                    <span>Marcela García</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="demo.html"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li><a href="evaluaciones.html"><i class="fas fa-chart-pie"></i> <span>Evaluaciones</span></a></li>
+                    <li><a href="mercado-laboral.html"><i class="fas fa-briefcase"></i> <span>Mercado Laboral</span></a></li>
+                    <li><a href="mentoria.html"><i class="fas fa-users"></i> <span>Mentoría</span></a></li>
+                    <li><a href="universidades.html"><i class="fas fa-university"></i> <span>Universidades</span></a></li>
+                    <li><a href="historias.html"><i class="fas fa-book-open"></i> <span>Historias</span></a></li>
+                    <li class="active"><a href="eventos.html"><i class="fas fa-calendar-alt"></i> <span>Eventos</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#configuracion"><i class="fas fa-cog"></i> <span>Configuración</span></a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Salir</span></a>
+            </div>
+        </div>
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <div class="section-header">
+                <h2>Eventos y Talleres</h2>
+                <p>Descubre oportunidades para aprender y conectar con profesionales</p>
+            </div>
+            
+            <!-- Calendar View -->
+            <div class="calendar-view">
+                <div class="calendar-header">
+                    <div class="month-selector">
+                        <button class="month-nav"><i class="fas fa-chevron-left"></i></button>
+                        <h3>Octubre 2023</h3>
+                        <button class="month-nav"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="view-toggle">
+                        <button class="view-btn active"><i class="fas fa-th"></i> Mes</button>
+                        <button class="view-btn"><i class="fas fa-list"></i> Lista</button>
+                    </div>
+                </div>
+                <div class="calendar-grid">
+                    <div class="calendar-day header">Lun</div>
+                    <div class="calendar-day header">Mar</div>
+                    <div class="calendar-day header">Mié</div>
+                    <div class="calendar-day header">Jue</div>
+                    <div class="calendar-day header">Vie</div>
+                    <div class="calendar-day header">Sáb</div>
+                    <div class="calendar-day header">Dom</div>
+                    <div class="calendar-day inactive">25</div>
+                    <div class="calendar-day inactive">26</div>
+                    <div class="calendar-day inactive">27</div>
+                    <div class="calendar-day inactive">28</div>
+                    <div class="calendar-day inactive">29</div>
+                    <div class="calendar-day inactive">30</div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <!-- Evento: Taller Intro a Python -->
+                    <div class="calendar-day has-event" data-event='{"title":"Taller: Intro a Python","date":"6 Octubre","desc":"Aprende los fundamentos de Python en este taller práctico.","type":"Taller","hora":"16:00 - 18:00","lugar":"Online (Zoom)"}'>
+                        6
+                        <span class="event-dot workshop"></span>
+                    </div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <!-- Evento: Webinar IA -->
+                    <div class="calendar-day has-event" data-event='{"title":"Webinar: Carreras en IA","date":"10 Octubre","desc":"Descubre trayectorias profesionales en IA con expertos del sector.","type":"Webinar","hora":"18:00 - 19:30","lugar":"Online"}'>
+                        10
+                        <span class="event-dot webinar"></span>
+                    </div>
+                    <div class="calendar-day">11</div>
+                    <!-- Evento: Networking -->
+                    <div class="calendar-day has-event" data-event='{"title":"Networking: Tech Innovators","date":"12 Octubre","desc":"Conoce a estudiantes y profesionales de tecnología en un ambiente relajado.","type":"Networking","hora":"19:00 - 21:00","lugar":"Café Innovación"}'>
+                        12
+                        <span class="event-dot networking"></span>
+                    </div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day">15</div>
+                    <!-- Evento: Conferencia -->
+                    <div class="calendar-day today has-event" data-event='{"title":"Conferencia: Futuro Tech","date":"16 Octubre","desc":"Panel con líderes de Google, Microsoft y startups locales.","type":"Conferencia","hora":"10:00 - 13:00","lugar":"Centro de Convenciones"}'>
+                        16
+                        <span class="event-dot conference"></span>
+                    </div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <!-- Evento: Taller Portfolio UX -->
+                    <div class="calendar-day has-event" data-event='{"title":"Taller: Portfolio UX","date":"19 Octubre","desc":"Aprende a estructurar y destacar tus proyectos de UX.","type":"Taller","hora":"16:00 - 18:00","lugar":"Online (Zoom)"}'>
+                        19
+                        <span class="event-dot workshop"></span>
+                    </div>
+                    <div class="calendar-day">20</div>
+                    <!-- Evento: Hackathon -->
+                    <div class="calendar-day has-event" data-event='{"title":"Hackathon Sinergia","date":"21 Octubre","desc":"48 horas para crear soluciones innovadoras. ¡Grandes premios!","type":"Hackathon","hora":"Todo el día","lugar":"Campus Tecnológico + Online"}'>
+                        21
+                        <span class="event-dot hackathon"></span>
+                    </div>
+                    <div class="calendar-day has-event" data-event='{"title":"Hackathon Sinergia","date":"22 Octubre","desc":"Segundo día del hackathon estudiantil.","type":"Hackathon","hora":"Todo el día","lugar":"Campus Tecnológico + Online"}'>
+                        22
+                        <span class="event-dot hackathon"></span>
+                    </div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <!-- Evento: Feria de empleo -->
+                    <div class="calendar-day has-event" data-event='{"title":"Feria de empleo tech","date":"25 Octubre","desc":"Conecta con más de 30 empresas tecnológicas.","type":"Reclutamiento","hora":"09:00 - 14:00","lugar":"Universidad Tecnológica"}'>
+                        25
+                        <span class="event-dot recruitment"></span>
+                    </div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                    <div class="calendar-day">31</div>
+                    <div class="calendar-day inactive">1</div>
+                    <div class="calendar-day inactive">2</div>
+                    <div class="calendar-day inactive">3</div>
+                    <div class="calendar-day inactive">4</div>
+                    <div class="calendar-day inactive">5</div>
+                </div>
+            </div>
+            <!-- Modal para mostrar detalles del evento -->
+            <div id="event-modal" class="event-modal">
+                <div class="event-modal-content">
+                    <span class="event-modal-close" id="close-modal">&times;</span>
+                    <h3 id="modal-title"></h3>
+                    <p><strong>Fecha:</strong> <span id="modal-date"></span></p>
+                    <p><strong>Hora:</strong> <span id="modal-hora"></span></p>
+                    <p><strong>Lugar:</strong> <span id="modal-lugar"></span></p>
+                    <p><strong>Tipo:</strong> <span id="modal-type"></span></p>
+                    <p id="modal-desc"></p>
+                </div>
+            </div>
+            <!-- Puedes dejar aquí el resto de tus secciones de eventos destacados, categorías, comunidad, etc. -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script>
+    document.querySelectorAll('.calendar-day.has-event').forEach(function(day) {
+        day.addEventListener('click', function() {
+            var event = JSON.parse(this.getAttribute('data-event'));
+            document.getElementById('modal-title').textContent = event.title;
+            document.getElementById('modal-date').textContent = event.date;
+            document.getElementById('modal-hora').textContent = event.hora;
+            document.getElementById('modal-lugar').textContent = event.lugar;
+            document.getElementById('modal-type').textContent = event.type;
+            document.getElementById('modal-desc').textContent = event.desc;
+            document.getElementById('event-modal').style.display = 'block';
+        });
+    });
+    document.getElementById('close-modal').onclick = function() {
+        document.getElementById('event-modal').style.display = 'none';
+    };
+    window.onclick = function(event) {
+        var modal = document.getElementById('event-modal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+    </script>
+</body>
+</html>

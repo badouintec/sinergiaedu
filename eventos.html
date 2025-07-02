@@ -9,7 +9,50 @@
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="assets/js/jquery.min.js"></script>
+    
+    <style>
+    /* Calendario interactivo y modal */
+    .event-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+    .event-dot.workshop { background: #1abc9c; }
+    .event-dot.webinar { background: #388be6; }
+    .event-dot.networking { background: #f47b20; }
+    .event-dot.conference { background: #e74c3c; }
+    .event-dot.hackathon { background: #9b59b6; }
+    .event-dot.recruitment { background: #f1c40f; }
+    .event-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0; top: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.5);
+    }
+    .event-modal-content {
+        background: #fff;
+        margin: 8% auto;
+        padding: 2em;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+    }
+    .event-modal-close {
+        position: absolute;
+        top: 12px; right: 18px;
+        font-size: 2em;
+        color: #388be6;
+        cursor: pointer;
+    }
+    </style>
 </head>
+
 <body class="dashboard-body">
     <!-- Header -->
     <header class="dashboard-header">
@@ -72,7 +115,6 @@
                         <button class="view-btn"><i class="fas fa-list"></i> Lista</button>
                     </div>
                 </div>
-                
                 <div class="calendar-grid">
                     <div class="calendar-day header">Lun</div>
                     <div class="calendar-day header">Mar</div>
@@ -81,7 +123,6 @@
                     <div class="calendar-day header">Vie</div>
                     <div class="calendar-day header">Sáb</div>
                     <div class="calendar-day header">Dom</div>
-                    
                     <div class="calendar-day inactive">25</div>
                     <div class="calendar-day inactive">26</div>
                     <div class="calendar-day inactive">27</div>
@@ -89,63 +130,65 @@
                     <div class="calendar-day inactive">29</div>
                     <div class="calendar-day inactive">30</div>
                     <div class="calendar-day">1</div>
-                    
                     <div class="calendar-day">2</div>
                     <div class="calendar-day">3</div>
                     <div class="calendar-day">4</div>
                     <div class="calendar-day">5</div>
-                    <div class="calendar-day has-event">
+                    <!-- Evento: Taller Intro a Python -->
+                    <div class="calendar-day has-event" data-event='{"title":"Taller: Intro a Python","date":"6 Octubre","desc":"Aprende los fundamentos de Python en este taller práctico.","type":"Taller","hora":"16:00 - 18:00","lugar":"Online (Zoom)"}'>
                         6
-                        <div class="day-event workshop">Taller: Intro a Python</div>
+                        <span class="event-dot workshop"></span>
                     </div>
                     <div class="calendar-day">7</div>
                     <div class="calendar-day">8</div>
-                    
                     <div class="calendar-day">9</div>
-                    <div class="calendar-day has-event">
+                    <!-- Evento: Webinar IA -->
+                    <div class="calendar-day has-event" data-event='{"title":"Webinar: Carreras en IA","date":"10 Octubre","desc":"Descubre trayectorias profesionales en IA con expertos del sector.","type":"Webinar","hora":"18:00 - 19:30","lugar":"Online"}'>
                         10
-                        <div class="day-event webinar">Webinar: Carreras en IA</div>
+                        <span class="event-dot webinar"></span>
                     </div>
                     <div class="calendar-day">11</div>
-                    <div class="calendar-day has-event">
+                    <!-- Evento: Networking -->
+                    <div class="calendar-day has-event" data-event='{"title":"Networking: Tech Innovators","date":"12 Octubre","desc":"Conoce a estudiantes y profesionales de tecnología en un ambiente relajado.","type":"Networking","hora":"19:00 - 21:00","lugar":"Café Innovación"}'>
                         12
-                        <div class="day-event networking">Networking: Tech Innovators</div>
+                        <span class="event-dot networking"></span>
                     </div>
                     <div class="calendar-day">13</div>
                     <div class="calendar-day">14</div>
                     <div class="calendar-day">15</div>
-                    
-                    <div class="calendar-day today has-event">
+                    <!-- Evento: Conferencia -->
+                    <div class="calendar-day today has-event" data-event='{"title":"Conferencia: Futuro Tech","date":"16 Octubre","desc":"Panel con líderes de Google, Microsoft y startups locales.","type":"Conferencia","hora":"10:00 - 13:00","lugar":"Centro de Convenciones"}'>
                         16
-                        <div class="day-event conference">Conferencia: Futuro Tech</div>
+                        <span class="event-dot conference"></span>
                     </div>
                     <div class="calendar-day">17</div>
                     <div class="calendar-day">18</div>
-                    <div class="calendar-day has-event">
+                    <!-- Evento: Taller Portfolio UX -->
+                    <div class="calendar-day has-event" data-event='{"title":"Taller: Portfolio UX","date":"19 Octubre","desc":"Aprende a estructurar y destacar tus proyectos de UX.","type":"Taller","hora":"16:00 - 18:00","lugar":"Online (Zoom)"}'>
                         19
-                        <div class="day-event workshop">Taller: Portfolio UX</div>
+                        <span class="event-dot workshop"></span>
                     </div>
                     <div class="calendar-day">20</div>
-                    <div class="calendar-day has-event">
+                    <!-- Evento: Hackathon -->
+                    <div class="calendar-day has-event" data-event='{"title":"Hackathon Sinergia","date":"21 Octubre","desc":"48 horas para crear soluciones innovadoras. ¡Grandes premios!","type":"Hackathon","hora":"Todo el día","lugar":"Campus Tecnológico + Online"}'>
                         21
-                        <div class="day-event hackathon">Hackathon Sinergia</div>
+                        <span class="event-dot hackathon"></span>
                     </div>
-                    <div class="calendar-day has-event">
+                    <div class="calendar-day has-event" data-event='{"title":"Hackathon Sinergia","date":"22 Octubre","desc":"Segundo día del hackathon estudiantil.","type":"Hackathon","hora":"Todo el día","lugar":"Campus Tecnológico + Online"}'>
                         22
-                        <div class="day-event hackathon">Hackathon Sinergia</div>
+                        <span class="event-dot hackathon"></span>
                     </div>
-                    
                     <div class="calendar-day">23</div>
                     <div class="calendar-day">24</div>
-                    <div class="calendar-day has-event">
+                    <!-- Evento: Feria de empleo -->
+                    <div class="calendar-day has-event" data-event='{"title":"Feria de empleo tech","date":"25 Octubre","desc":"Conecta con más de 30 empresas tecnológicas.","type":"Reclutamiento","hora":"09:00 - 14:00","lugar":"Universidad Tecnológica"}'>
                         25
-                        <div class="day-event recruitment">Feria de empleo tech</div>
+                        <span class="event-dot recruitment"></span>
                     </div>
                     <div class="calendar-day">26</div>
                     <div class="calendar-day">27</div>
                     <div class="calendar-day">28</div>
                     <div class="calendar-day">29</div>
-                    
                     <div class="calendar-day">30</div>
                     <div class="calendar-day">31</div>
                     <div class="calendar-day inactive">1</div>
@@ -155,6 +198,17 @@
                     <div class="calendar-day inactive">5</div>
                 </div>
             </div>
+            <!-- Modal para mostrar detalles del evento -->
+            <div id="event-modal" class="event-modal">
+                <div class="event-modal-content">
+                    <span class="event-modal-close" id="close-modal">&times;</span>
+                    <h3 id="modal-title"></h3>
+                    <p><strong>Fecha:</strong> <span id="modal-date"></span></p>
+                    <p><strong>Hora:</strong> <span id="modal-hora"></span></p>
+                    <p><strong>Lugar:</strong> <span id="modal-lugar"></span></p>
+                    <p><strong>Tipo:</strong> <span id="modal-type"></span></p>
+                    <p id="modal-desc"></p>
+                </div>
             
             <!-- Featured Events -->
             <div class="featured-events">
@@ -321,7 +375,7 @@
                 <div class="community-events-container">
                     <div class="community-card">
                         <div class="community-image">
-                            <img src="images/community-event1.jpg" alt="Evento comunitario">
+                            <img src="images/eventos_tecno.jpg" alt="Evento comunitario">
                         </div>
                         <div class="community-content">
                             <h4>Meetup JavaScript: Frameworks modernos</h4>
@@ -336,7 +390,7 @@
                     
                     <div class="community-card">
                         <div class="community-image">
-                            <img src="images/community-event2.jpg" alt="Evento comunitario">
+                            <img src="images\evennt.jpeg" alt="Evento comunitario">
                         </div>
                         <div class="community-content">
                             <h4>WomenTechMakers: Liderando en tecnología</h4>
@@ -351,7 +405,7 @@
                     
                     <div class="community-card">
                         <div class="community-image">
-                            <img src="images/community-event3.jpg" alt="Evento comunitario">
+                            <img src="images\eventos_tecno.jpg" alt="Evento comunitario">
                         </div>
                         <div class="community-content">
                             <h4>Data Science Summit 2023</h4>
@@ -377,5 +431,28 @@
     <!-- Scripts -->
     <script src="assets/js/util.js"></script>
     <script src="assets/js/dashboard.js"></script>
+    <script>
+    document.querySelectorAll('.calendar-day.has-event').forEach(function(day) {
+        day.addEventListener('click', function() {
+            var event = JSON.parse(this.getAttribute('data-event'));
+            document.getElementById('modal-title').textContent = event.title;
+            document.getElementById('modal-date').textContent = event.date;
+            document.getElementById('modal-hora').textContent = event.hora;
+            document.getElementById('modal-lugar').textContent = event.lugar;
+            document.getElementById('modal-type').textContent = event.type;
+            document.getElementById('modal-desc').textContent = event.desc;
+            document.getElementById('event-modal').style.display = 'block';
+        });
+    });
+    document.getElementById('close-modal').onclick = function() {
+        document.getElementById('event-modal').style.display = 'none';
+    };
+    window.onclick = function(event) {
+        var modal = document.getElementById('event-modal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+    </script>
 </body>
 </html>
