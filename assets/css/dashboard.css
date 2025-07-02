@@ -1432,3 +1432,9 @@ body.dashboard-body {
     border-radius: 8px;
     display: block;
 }
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px; /* Ajusta el espacio entre tarjetas */
+}
