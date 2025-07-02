@@ -339,16 +339,16 @@
             <div class="event-categories">
                 <h3>Eventos por Categoría</h3>
                 <div class="category-tabs">
-                    <button class="category-tab active">Todos</button>
-                    <button class="category-tab">Talleres</button>
-                    <button class="category-tab">Conferencias</button>
-                    <button class="category-tab">Networking</button>
-                    <button class="category-tab">Competencias</button>
-                    <button class="category-tab">Reclutamiento</button>
+                    <button class="category-tab active" data-category="all">Todos</button>
+                    <button class="category-tab" data-category="taller">Talleres</button>
+                    <button class="category-tab" data-category="webinar">Webinars</button>
+                    <button class="category-tab" data-category="networking">Networking</button>
+                    <button class="category-tab" data-category="hackathon">Competencias</button>
+                    <button class="category-tab" data-category="recruitment">Reclutamiento</button>
                 </div>
                 
                 <div class="category-events">
-                    <div class="event-list-item">
+                    <div class="event-list-item webinar">
                         <div class="event-list-date">
                             <span class="month">Oct</span>
                             <span class="day">10</span>
@@ -368,7 +368,7 @@
                         </div>
                     </div>
                     
-                    <div class="event-list-item">
+                    <div class="event-list-item networking">
                         <div class="event-list-date">
                             <span class="month">Oct</span>
                             <span class="day">12</span>
@@ -388,7 +388,7 @@
                         </div>
                     </div>
                     
-                    <div class="event-list-item">
+                    <div class="event-list-item taller">
                         <div class="event-list-date">
                             <span class="month">Oct</span>
                             <span class="day">19</span>
@@ -494,6 +494,30 @@
             modal.style.display = "none";
         }
     };
+    </script>
+    <script>
+    document.querySelectorAll('.category-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            // Quitar clase activa de todos los tabs
+            document.querySelectorAll('.category-tab').forEach(function(t) {
+                t.classList.remove('active');
+            });
+            // Activar el tab seleccionado
+            this.classList.add('active');
+            // Obtener la categoría seleccionada
+            var cat = this.getAttribute('data-category');
+            // Mostrar/ocultar eventos según la categoría
+            document.querySelectorAll('.event-list-item').forEach(function(item) {
+                if (cat === 'all') {
+                    item.style.display = '';
+                } else if (item.classList.contains(cat)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
     </script>
 </body>
 </html>

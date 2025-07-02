@@ -1468,3 +1468,70 @@ body.dashboard-body {
 }
 
 
+/* Tarjeta para eventos por categoría */
+.category-events {
+    display: flex;
+    flex-direction: column;
+    gap: 28px; /* Espacio entre tarjetas */
+}
+
+.event-list-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(56, 139, 230, 0.08);
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: box-shadow 0.2s;
+}
+
+.event-list-item:hover {
+    box-shadow: 0 4px 24px rgba(56, 139, 230, 0.16);
+}
+
+.event-list-date {
+    min-width: 56px;
+    text-align: center;
+    background: #f4f8fd;
+    border-radius: 8px;
+    padding: 12px 0 8px 0;
+    margin-right: 16px;
+    font-weight: bold;
+    color: #388be6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-list-date .month {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-list-date .day {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.event-list-content {
+    flex: 1;
+}
+
+.event-list-action {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Más espacio arriba y abajo de los eventos por categoría */
+.category-tabs {
+    margin-bottom: 32px; /* Espacio entre tabs y primer evento */
+}
+
+.category-events {
+    margin-bottom: 48px; /* Espacio entre el último evento y la siguiente sección */
+}
