@@ -1637,3 +1637,88 @@ body.dashboard-body {
 .month-nav:hover {
     background: #2563b6;    /* Color al pasar el mouse */
 }
+
+
+/* Tarjetas de historias */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.story-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(56, 139, 230, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    min-height: 380px;
+}
+
+.story-card:hover {
+    box-shadow: 0 4px 24px rgba(56, 139, 230, 0.16);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.story-card-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.story-card-content {
+    padding: 20px 18px 18px 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.story-category {
+    color: #388be6;
+    font-size: 0.95em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-card-content h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.15em;
+    color: #222;
+}
+
+.story-author {
+    font-size: 0.98em;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.story-preview {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.story-stats {
+    margin-top: 10px;
+    color: #388be6;
+    font-size: 0.95em;
+    display: flex;
+    gap: 16px;
+}
+
+.story-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+
+

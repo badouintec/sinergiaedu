@@ -77,16 +77,16 @@
             
             <!-- Story Categories -->
             <div class="story-categories">
-                <button class="category-tab active">Recomendados</button>
-                <button class="category-tab">Cambios de Carrera</button>
-                <button class="category-tab">Emprendedores</button>
-                <button class="category-tab">Internacional</button>
-                <button class="category-tab">Tecnología</button>
+                <button class="category-tab active" data-category="all">Recomendados</button>
+                <button class="category-tab" data-category="carrera">Cambios de Carrera</button>
+                <button class="category-tab" data-category="emprendedor">Emprendedores</button>
+                <button class="category-tab" data-category="internacional">Internacional</button>
+                <button class="category-tab" data-category="tecnologia">Tecnología</button>
             </div>
             
             <!-- Story Grid -->
             <div class="story-grid">
-                <div class="story-card">
+                <div class="story-card carrera">
                     <div class="story-card-image">
                         <img src="images\inspo.jpg" alt="Historia">
                     </div>
@@ -104,7 +104,7 @@
                     <a href="#" class="story-card-link"></a>
                 </div>
                 
-                <div class="story-card">
+                <div class="story-card emprendedor">
                     <div class="story-card-image">
                         <img src="images\inspo.jpg" alt="Historia">
                     </div>
@@ -122,7 +122,7 @@
                     <a href="#" class="story-card-link"></a>
                 </div>
                 
-                <div class="story-card">
+                <div class="story-card internacional">
                     <div class="story-card-image">
                         <img src="images\inspo.jpg" alt="Historia">
                     </div>
@@ -140,7 +140,7 @@
                     <a href="#" class="story-card-link"></a>
                 </div>
                 
-                <div class="story-card">
+                <div class="story-card tecnologia">
                     <div class="story-card-image">
                         <img src="images\inspo.jpg" alt="Historia">
                     </div>
@@ -210,10 +210,45 @@
                 </div>
             </div>
         </div>
+        <div id="no-stories-message" style="display:none; text-align:center; color:#888; padding:32px 0; font-size:1.2em;">
+            No hay historias para esta categoría.
+        </div>
     </div>
 
     <!-- Scripts -->
     <script src="assets/js/util.js"></script>
     <script src="assets/js/dashboard.js"></script>
+    <script>
+    document.querySelectorAll('.category-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            // Quitar clase activa de todos los tabs
+            document.querySelectorAll('.category-tab').forEach(function(t) {
+                t.classList.remove('active');
+            });
+            // Activar el tab seleccionado
+            this.classList.add('active');
+            // Obtener la categoría seleccionada
+            var cat = this.getAttribute('data-category');
+            // Mostrar/ocultar historias según la categoría
+            var found = false;
+            document.querySelectorAll('.story-card').forEach(function(card) {
+                if (cat === 'all') {
+                    card.style.display = '';
+                    found = true;
+                } else if (card.classList.contains(cat)) {
+                    card.style.display = '';
+                    found = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            // Mensaje si no hay historias (opcional)
+            var msg = document.getElementById('no-stories-message');
+            if (msg) {
+                msg.style.display = found ? 'none' : 'block';
+            }
+        });
+    });
+    </script>
 </body>
 </html>
