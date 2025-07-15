@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="assets/js/jquery.min.js"></script>
     <style>
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 260px;
+            padding: 2em;
+            min-height: calc(100vh - 80px);
+            background: #f5f7fa;
+        }
+        @media (max-width: 1024px) {
+            .main-content {
+                margin-left: 0;
+                padding: 1.5em;
+            }
+        }
         /* Estilos específicos para la sección de universidades */
         .university-filters {
             display: flex;
@@ -175,7 +188,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="main-content" style="margin-left: 10px;">
+        <div class="main-content">
             <h1 class="page-title"># Universidades</h1>
 
             <!-- Filtros -->
