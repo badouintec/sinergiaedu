@@ -10,6 +10,210 @@
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="assets/js/jquery.min.js"></script>
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .main-content-historias {
+            margin-left: 260px;
+            padding: 2.5em 2em 2em 2em;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+        .historias-header {
+            margin-bottom: 1.5em;
+        }
+        .historias-title {
+            color: #0147AB;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 0.2em;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+        }
+        .historias-subtitle {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+        .story-categories {
+            display: flex;
+            gap: 1em;
+            margin-bottom: 2em;
+            flex-wrap: wrap;
+        }
+        .category-tab {
+            background: #FF5722;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.6em 1.7em;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(255,87,34,0.08);
+        }
+        .category-tab.active, .category-tab:hover {
+            background: #ff784e;
+            box-shadow: 0 4px 16px rgba(255,87,34,0.15);
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2em;
+            margin-bottom: 2.5em;
+        }
+        .story-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .story-card:hover {
+            box-shadow: 0 6px 24px rgba(25, 118, 210, 0.18);
+        }
+        .story-card-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .story-card-content {
+            padding: 1.3em 1.5em 1em 1.5em;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .story-category {
+            color: #FF5722;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-bottom: 0.5em;
+        }
+        .story-card-content h4 {
+            color: #0147AB;
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 0.3em;
+        }
+        .story-author {
+            color: #888;
+            font-size: 0.98em;
+            margin-bottom: 0.5em;
+        }
+        .story-preview {
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 1em;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .story-stats {
+            display: flex;
+            gap: 1.2em;
+            color: #888;
+            font-size: 0.98em;
+            margin-bottom: 1em;
+        }
+        .story-card-link {
+            display: block;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 1;
+        }
+        .story-card .btn-orange {
+            background: #FF5722;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.6em 1.7em;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: auto;
+            transition: background 0.2s, box-shadow 0.2s;
+            z-index: 2;
+            position: relative;
+        }
+        .story-card .btn-orange:hover {
+            background: #ff784e;
+            box-shadow: 0 4px 16px rgba(255,87,34,0.15);
+        }
+        /* Testimonio destacado */
+        .testimonio-destacado {
+            background: linear-gradient(90deg, #e3eaf6 60%, #f8f9fa 100%);
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+            padding: 2em 2em 2em 3em;
+            margin: 2.5em 0 2em 0;
+            display: flex;
+            align-items: center;
+            gap: 2em;
+        }
+        .testimonio-destacado .testimonio-cita {
+            font-size: 1.25em;
+            color: #0147AB;
+            font-style: italic;
+            margin-bottom: 0.7em;
+        }
+        .testimonio-destacado .testimonio-autor {
+            color: #333;
+            font-weight: 600;
+        }
+        .testimonio-destacado .testimonio-carrera {
+            color: #888;
+            font-size: 0.98em;
+        }
+        .testimonio-destacado img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(25, 71, 171, 0.10);
+        }
+        /* Botón flotante */
+        .btn-float {
+            position: fixed;
+            bottom: 32px;
+            right: 40px;
+            background: #FF5722;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 1em 2.2em;
+            font-size: 1.1em;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(255,87,34,0.18);
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .btn-float:hover {
+            background: #ff784e;
+            box-shadow: 0 8px 32px rgba(255,87,34,0.25);
+        }
+        @media (max-width: 1100px) {
+            .main-content-historias {
+                margin-left: 0;
+                padding: 1.5em 0.5em 1.5em 0.5em;
+            }
+        }
+        @media (max-width: 800px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonio-destacado {
+                flex-direction: column;
+                padding: 1.5em 1em;
+                gap: 1em;
+            }
+        }
+    </style>
 </head>
 <body class="dashboard-body">
     <!-- Header -->
@@ -54,30 +258,11 @@
         </div>
 
         <!-- Main Content Area -->
-        <!-- Featured Stories -->
-        <div class="featured-story">
-            <div class="featured-story-image">
-                <img src="images/inspo.jpg" alt="Historia destacada">
+        <div class="main-content-historias">
+            <div class="historias-header">
+                <div class="historias-title">Historias que inspiran</div>
+                <div class="historias-subtitle">Descubre trayectorias reales que transformaron vidas gracias a Sinergia</div>
             </div>
-            <div class="featured-story-content">
-                <div class="story-tag"><i class="fas fa-star"></i> Historia Destacada</div>
-                <h3>De estudiante a líder: Mi camino hacia Google</h3>
-                <p class="story-meta">
-                    <i class="fas fa-user"></i> Alejandra Vázquez &nbsp;|&nbsp; 
-                    <i class="fas fa-briefcase"></i> Ingeniera de Software en Google
-                </p>
-                <p class="story-excerpt">
-                    Cuando me gradué de bachillerato, no tenía idea de qué carrera seguir. Sinergia me ayudó a identificar mis fortalezas en lógica y creatividad, guiándome hacia la programación, algo que ni siquiera había considerado...
-                </p>
-                <blockquote>
-                    <i class="fas fa-quote-left"></i>
-                    El momento que cambió mi vida fue cuando mi mentor de Sinergia me animó a participar en un hackathon. Gané el tercer lugar y eso me abrió puertas que nunca imaginé posibles.
-                </blockquote>
-                <a href="#" class="button special">Leer Historia Completa</a>
-            </div>
-        </div>
-            
-            <!-- Story Categories -->
             <div class="story-categories">
                 <button class="category-tab active" data-category="all">Recomendados</button>
                 <button class="category-tab" data-category="carrera">Cambios de Carrera</button>
@@ -85,9 +270,8 @@
                 <button class="category-tab" data-category="internacional">Internacional</button>
                 <button class="category-tab" data-category="tecnologia">Tecnología</button>
             </div>
-            
-            <!-- Story Grid -->
             <div class="story-grid">
+                <!-- Ejemplo de card 1 -->
                 <div class="story-card carrera">
                     <div class="story-card-image">
                         <img src="images/inspo.jpg" alt="Historia">
@@ -102,10 +286,10 @@
                             <span><i class="fas fa-comment"></i> 38</span>
                             <span><i class="fas fa-eye"></i> 1.2k</span>
                         </div>
+                        <button class="btn-orange">Leer historia completa</button>
                     </div>
-                    <a href="#" class="story-card-link"></a>
                 </div>
-                
+                <!-- Ejemplo de card 2 -->
                 <div class="story-card emprendedor">
                     <div class="story-card-image">
                         <img src="images/inspo.jpg" alt="Historia">
@@ -120,10 +304,10 @@
                             <span><i class="fas fa-comment"></i> 52</span>
                             <span><i class="fas fa-eye"></i> 2.8k</span>
                         </div>
+                        <button class="btn-orange">Leer historia completa</button>
                     </div>
-                    <a href="#" class="story-card-link"></a>
                 </div>
-                
+                <!-- Ejemplo de card 3 -->
                 <div class="story-card internacional">
                     <div class="story-card-image">
                         <img src="images/inspo.jpg" alt="Historia">
@@ -138,10 +322,10 @@
                             <span><i class="fas fa-comment"></i> 45</span>
                             <span><i class="fas fa-eye"></i> 1.9k</span>
                         </div>
+                        <button class="btn-orange">Leer historia completa</button>
                     </div>
-                    <a href="#" class="story-card-link"></a>
                 </div>
-                
+                <!-- Ejemplo de card 4 -->
                 <div class="story-card tecnologia">
                     <div class="story-card-image">
                         <img src="images/inspo.jpg" alt="Historia">
@@ -156,66 +340,21 @@
                             <span><i class="fas fa-comment"></i> 29</span>
                             <span><i class="fas fa-eye"></i> 1.5k</span>
                         </div>
-                    </div>
-                    <a href="#" class="story-card-link"></a>
-                </div>
-            </div>
-            
-            <!-- Mensaje si no hay historias -->
-            <div id="no-stories-message" style="display:none; text-align:center; color:#888; padding:32px 0; font-size:1.2em;">
-                No hay historias para esta categoría.
-            </div>
-            
-            <!-- Testimonials -->
-            <div class="testimonials-section">
-                <h3>Lo que dicen nuestros usuarios</h3>
-                <div class="testimonials-slider">
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p>"Sinergia transformó mi manera de ver mi futuro profesional. La evaluación vocacional realmente reflejó mis intereses y habilidades de una forma que nunca había visto antes."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/inspo.jpg" alt="Testimonial Author">
-                            <div class="author-info">
-                                <h4>Pedro Morales</h4>
-                                <p>Estudiante de Ingeniería Informática</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p>"Lo que más valoro de Sinergia es el programa de mentoría. Mi mentor no solo me guió en decisiones académicas, sino que me presentó a contactos importantes en la industria."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/inspo.jpg" alt="Testimonial Author">
-                            <div class="author-info">
-                                <h4>Sofía Ramírez</h4>
-                                <p>Diseñadora UX/UI</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <p>"Gracias a los análisis de mercado laboral de Sinergia pude enfocarme en desarrollar habilidades con alta demanda, lo que me ayudó a conseguir mi primer trabajo en tiempo récord."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/inspo.jpg" alt="Testimonial Author">
-                            <div class="author-info">
-                                <h4>Martín López</h4>
-                                <p>Analista de Datos Junior</p>
-                            </div>
-                        </div>
+                        <button class="btn-orange">Leer historia completa</button>
                     </div>
                 </div>
-                
-                <div class="testimonials-nav">
-                    <button class="nav-dot active"></button>
-                    <button class="nav-dot"></button>
-                    <button class="nav-dot"></button>
+            </div>
+            <!-- Testimonio destacado -->
+            <div class="testimonio-destacado">
+                <img src="images/inspo.jpg" alt="Usuario destacado">
+                <div>
+                    <div class="testimonio-cita">“Sinergia me ayudó a descubrir mi verdadera vocación y a conectar con mentores que cambiaron mi vida.”</div>
+                    <div class="testimonio-autor">Laura Martínez</div>
+                    <div class="testimonio-carrera">Ingeniera en Sistemas</div>
                 </div>
             </div>
+            <!-- Botón flotante para compartir historia -->
+            <button class="btn-float"><i class="fas fa-plus"></i> Comparte tu historia</button>
         </div>
     </div>
 
